@@ -2,9 +2,9 @@
 
 {% trans_default_domain 'NucleosProfileBundle' %}
 
-{% block nucleos_profile_content %}
+{% block nucleos_user_content %}
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
         <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
-{% endblock nucleos_profile_content %}
+{% endblock nucleos_user_content %}
