@@ -37,3 +37,9 @@ nucleos_user:
 
     group:
         group_class: 'Nucleos\ProfileBundle\Tests\App\Entity\Group'
+
+
+nucleos_profile:
+    registration:
+        confirmation:
+            from_email:  'no-reply@localhost'
