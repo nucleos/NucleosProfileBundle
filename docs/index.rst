@@ -15,8 +15,10 @@ The following documents are available:
     events
     mailing
     routing
+    customize_profile
+    customize_registration
     configuration
-    migrate_from_fos
+    migrate_from_fos <https://nucleosuserbundle.readthedocs.io/en/latest/migrate_from_fos.html>
 
 
 .. _NucleosUserBundle: https://github.com/nucleos/NucleosUserBundle/
