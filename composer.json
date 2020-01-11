@@ -19,7 +19,7 @@
     "require": {
         "php": "^7.3",
         "egulias/email-validator": "^2.1.10",
-        "nucleos/user-bundle": "dev-master",
+        "nucleos/user-bundle": "^1.0",
         "symfony/config": "^4.4 || ^5.0",
         "symfony/dependency-injection": "^4.4 || ^5.0",
         "symfony/event-dispatcher": "^4.4 || ^5.0",
