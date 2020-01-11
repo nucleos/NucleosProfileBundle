@@ -1,0 +1,8 @@
+{% trans_default_domain 'NucleosProfileBundle' %}
+
+{{ form_start(form, { 'action': path('nucleos_profile_profile_edit'), 'attr': { 'class': 'nucleos_profile_profile_edit' } }) }}
+    {{ form_widget(form) }}
+<div>
+    <input type="submit" value="{{ 'profile.edit.submit'|trans }}"/>
+</div>
+{{ form_end(form) }}

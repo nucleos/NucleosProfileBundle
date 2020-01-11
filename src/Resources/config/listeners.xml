@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+  <services>
+    <service id="nucleos_profile.listener.authentication" class="Nucleos\ProfileBundle\EventListener\AuthenticationListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="nucleos_profile.security.login_manager"/>
+      <argument>%nucleos_profile.firewall_name%</argument>
+    </service>
+  </services>
+</container>

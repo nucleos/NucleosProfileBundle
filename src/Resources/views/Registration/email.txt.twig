@@ -1,0 +1,6 @@
+{% trans_default_domain 'NucleosProfileBundle' %}
+
+{{ 'registration.email.message'|trans({
+    '%username%': user.username,
+    '%confirmationUrl%': confirmationUrl
+}) }}
