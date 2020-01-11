@@ -83,12 +83,16 @@ final class AlreadyLoggedinListener implements EventSubscriberInterface
         $event->setResponse($this->getRedirect($event->getRequest()));
     }
 
-    private function getRedirect(Request $request): RedirectResponse
+    private function getRedirect(?Request $request): RedirectResponse
     {
-        $url = $request->server->get('HTTP_REFERER');
+        $url = null;
 
-        if ($request->getUri() === $url) {
-            $url = null;
+        if (null !== $request) {
+            $url = $request->server->get('HTTP_REFERER');
+
+            if ($request->getUri() === $url) {
+                $url = null;
+            }
         }
 
         if (null === $url) {
