@@ -80,10 +80,5 @@ logging in, creating users, etc.
     nucleos_profile:
         resource: "@NucleosProfileBundle/src/Resources/config/routing/all.xml"
 
-.. note::
-
-    In order to use the built-in email functionality (confirmation of the account,
-    resetting of the password), you must activate and configure the SwiftmailerBundle.
-
 .. _Symfony documentation: https://symfony.com/doc/current/book/translation.html
 .. _NucleosUserBundle documentation: https://nucleosuserbundle.readthedocs.io
