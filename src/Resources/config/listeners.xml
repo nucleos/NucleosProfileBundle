@@ -4,7 +4,7 @@
     <service id="Nucleos\ProfileBundle\EventListener\AuthenticationListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="nucleos_user.security.login_manager"/>
-      <argument>%nucleos_profile.firewall_name%</argument>
+      <argument>%nucleos_user.firewall_name%</argument>
     </service>
     <service id="Nucleos\ProfileBundle\EventListener\AlreadyLoggedinListener">
       <tag name="kernel.event_subscriber"/>

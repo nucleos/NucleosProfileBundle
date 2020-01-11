@@ -31,3 +31,5 @@ form:
     password_confirmation: 'Passwort bestätigen'
     new_password: 'Neues Passwort'
     new_password_confirmation: 'Neues Passwort bestätigen'
+    timezone: 'Zeitzone'
+    locale: 'Sprache'

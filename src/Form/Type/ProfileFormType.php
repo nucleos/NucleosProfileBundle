@@ -41,10 +41,12 @@ final class ProfileFormType extends AbstractType
             ->add('locale', LocaleType::class, [
                 'label'              => 'form.locale',
                 'translation_domain' => 'NucleosProfileBundle',
+                'required'           => false,
             ])
             ->add('timezone', TimezoneType::class, [
-                'label'              => 'form.locale',
+                'label'              => 'form.timezone',
                 'translation_domain' => 'NucleosProfileBundle',
+                'required'           => false,
             ])
         ;
     }
