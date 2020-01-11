@@ -65,8 +65,6 @@ Add the following configuration to your ``config/packages/nucleos_profile.yaml``
             confirmation:
                 from_email:  "%mailer_user%"
 
-
-
 Step 4: Configure your application's security.yaml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
