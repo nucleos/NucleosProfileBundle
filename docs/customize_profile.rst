@@ -8,7 +8,7 @@ Customize Profile
 Add more fields
 ---------------
 
-- Extend `Nucleos\ProfileBundle\Form\Model\Profile`
+- Extend ``Nucleos\ProfileBundle\Form\Model\Profile``
 - Add custom form model to configuration
 - Use symfony FormExtensions
 
