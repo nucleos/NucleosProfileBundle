@@ -1,5 +1,5 @@
-Install the bundle
-==================
+Installation
+============
 
 Prerequisites
 -------------
