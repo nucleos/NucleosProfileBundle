@@ -78,7 +78,7 @@ logging in, creating users, etc.
 
     # config/routes/nucleos_profile.yaml
     nucleos_profile:
-        resource: "@NucleosProfileBundle/src/Resources/config/routing/all.xml"
+        resource: "@NucleosProfileBundle/Resources/config/routing/all.xml"
 
 .. note::
 
