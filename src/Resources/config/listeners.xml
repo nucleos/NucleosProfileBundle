@@ -3,8 +3,13 @@
   <services>
     <service id="Nucleos\ProfileBundle\EventListener\AuthenticationListener">
       <tag name="kernel.event_subscriber"/>
-      <argument type="service" id="nucleos_profile.security.login_manager"/>
+      <argument type="service" id="nucleos_user.security.login_manager"/>
       <argument>%nucleos_profile.firewall_name%</argument>
+    </service>
+    <service id="Nucleos\ProfileBundle\EventListener\AlreadyLoggedinListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="security.helper"/>
+      <argument type="service" id="router"/>
     </service>
   </services>
 </container>
