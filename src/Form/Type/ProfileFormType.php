@@ -43,7 +43,7 @@ final class ProfileFormType extends AbstractType
                 'translation_domain' => 'NucleosProfileBundle',
             ])
             ->add('timezone', TimezoneType::class, [
-                'label'              => 'form.locale',
+                'label'              => 'form.timezone',
                 'translation_domain' => 'NucleosProfileBundle',
             ])
         ;
