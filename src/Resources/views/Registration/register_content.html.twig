@@ -1,0 +1,8 @@
+{% trans_default_domain 'NucleosProfileBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('nucleos_profile_registration_register'), 'attr': {'class': 'nucleos_profile_registration_register'}}) }}
+    {{ form_widget(form) }}
+<div>
+    <input type="submit" value="{{ 'registration.submit'|trans }}"/>
+</div>
+{{ form_end(form) }}
