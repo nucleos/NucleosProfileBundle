@@ -12,6 +12,7 @@
 namespace Nucleos\ProfileBundle\Tests\DependencyInjection;
 
 use Nucleos\ProfileBundle\DependencyInjection\NucleosProfileExtension;
+use Nucleos\ProfileBundle\EventListener\FlashListener;
 use Nucleos\ProfileBundle\Form\Model\Profile;
 use Nucleos\ProfileBundle\Form\Model\Registration;
 use PHPUnit\Framework\TestCase;
@@ -43,14 +44,14 @@ final class NucleosProfileExtensionTest extends TestCase
     {
         $this->createEmptyConfiguration();
 
-        $this->assertHasDefinition('nucleos_profile.listener.flash');
+        $this->assertHasDefinition(FlashListener::class);
     }
 
     public function testUserLoadFlashesCanBeDisabled(): void
     {
         $this->createFullConfiguration();
 
-        $this->assertNotHasDefinition('nucleos_profile.listener.flash');
+        $this->assertNotHasDefinition(FlashListener::class);
     }
 
     public function testUserLoadFormModelsWithDefaults(): void
