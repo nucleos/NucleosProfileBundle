@@ -3,7 +3,7 @@
 repository:
     name: NucleosProfileBundle
     description: Registration and profile management for symfony
-    homepage: https://nucleosprofilebundle.readthedocs.io/
+    homepage: https://docs.nucleos.rocks/projects/profile-bundle/
     topics: symfony, symfony-bundle, bundle, user, management, profile, registration
 
     default_branch: master
