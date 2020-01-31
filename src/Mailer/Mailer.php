@@ -37,7 +37,7 @@ final class Mailer implements MailerInterface
     private $router;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $fromEmail;
 
@@ -45,7 +45,7 @@ final class Mailer implements MailerInterface
         SymfonyMailer $mailer,
         TranslatorInterface $translator,
         UrlGeneratorInterface $router,
-        string $fromEmail
+        ?string $fromEmail
     ) {
         $this->mailer     = $mailer;
         $this->translator = $translator;
@@ -65,7 +65,6 @@ final class Mailer implements MailerInterface
         );
 
         $mail = (new ResettingMail())
-            ->from(Address::fromString($this->fromEmail))
             ->to(new Address($user->getEmail()))
             ->subject($this->translator->trans('registration.email.subject', [
                 '%username%' => $user->getUsername(),
@@ -73,6 +72,10 @@ final class Mailer implements MailerInterface
             ->setUser($user)
             ->setConfirmationUrl($url)
         ;
+
+        if (null !== $this->fromEmail) {
+            $mail->from(Address::fromString($this->fromEmail));
+        }
 
         $this->mailer->send($mail);
     }

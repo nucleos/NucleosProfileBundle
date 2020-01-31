@@ -63,7 +63,7 @@ class Configuration implements ConfigurationInterface
                             ->addDefaultsIfNotSet()
                             ->children()
                                 ->booleanNode('enabled')->defaultFalse()->end()
-                                ->scalarNode('from_email')->isRequired()->cannotBeEmpty()->end()
+                                ->scalarNode('from_email')->defaultNull()->end()
                             ->end()
                         ->end()
                     ->end()

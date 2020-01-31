@@ -74,8 +74,7 @@ final class NucleosProfileExtensionTest extends TestCase
     {
         $this->configuration = new ContainerBuilder();
         $loader              = new NucleosProfileExtension();
-        $config              = $this->getEmptyConfig();
-        $loader->load([$config], $this->configuration);
+        $loader->load([], $this->configuration);
         static::assertInstanceOf(ContainerBuilder::class, $this->configuration);
     }
 
@@ -86,21 +85,6 @@ final class NucleosProfileExtensionTest extends TestCase
         $config              = $this->getFullConfig();
         $loader->load([$config], $this->configuration);
         static::assertInstanceOf(ContainerBuilder::class, $this->configuration);
-    }
-
-    /**
-     * @return array<mixed>
-     */
-    private function getEmptyConfig(): array
-    {
-        $yaml   = <<<'EOF'
-registration:
-    confirmation:
-        from_email: register@acme.org
-EOF;
-        $parser = new Parser();
-
-        return $parser->parse($yaml);
     }
 
     /**
