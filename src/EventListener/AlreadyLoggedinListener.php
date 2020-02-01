@@ -44,9 +44,6 @@ final class AlreadyLoggedinListener implements EventSubscriberInterface
         $this->router   = $router;
     }
 
-    /**
-     * @return string[]
-     */
     public static function getSubscribedEvents(): array
     {
         return [
