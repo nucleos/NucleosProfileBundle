@@ -25,8 +25,3 @@ parameters:
 			count: 3
 			path: src/DependencyInjection/Configuration.php
 
-		-
-			message: "#^Return type \\(array\\<string\\>\\) of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:getSubscribedEvents\\(\\) should be covariant with return type \\(array\\<string, array\\<int\\|string, array\\<int\\|string, int\\|string\\>\\|int\\|string\\>\\|string\\>\\) of method Symfony\\\\Component\\\\EventDispatcher\\\\EventSubscriberInterface\\:\\:getSubscribedEvents\\(\\)$#"
-			count: 1
-			path: src/EventListener/AlreadyLoggedinListener.php
-
