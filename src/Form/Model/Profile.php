@@ -26,6 +26,18 @@ class Profile
      */
     protected $timezone;
 
+    public static function fromUser(UserInterface $user): self
+    {
+        $profile = new static();
+
+        if ($user instanceof LocaleAwareInterface) {
+            $profile->setLocale((string) $user->getLocale());
+            $profile->setTimezone((string) $user->getTimezone());
+        }
+
+        return $profile;
+    }
+
     public function setLocale(?string $locale): void
     {
         $this->locale = $locale;

@@ -25,3 +25,8 @@ parameters:
 			count: 3
 			path: src/DependencyInjection/Configuration.php
 
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Form/Model/Profile.php
+
