@@ -42,16 +42,13 @@ final class RegistrationFormType extends AbstractType
         $builder
             ->add('email', EmailType::class, [
                 'label'              => 'form.email',
-                'translation_domain' => 'NucleosProfileBundle',
             ])
             ->add('username', TextType::class, [
                 'label'              => 'form.username',
-                'translation_domain' => 'NucleosProfileBundle',
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type'            => PasswordType::class,
                 'options'         => [
-                    'translation_domain' => 'NucleosProfileBundle',
                     'attr'               => [
                         'autocomplete' => 'new-password',
                     ],
@@ -66,8 +63,9 @@ final class RegistrationFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'    => $this->class,
-            'csrf_token_id' => 'registration',
+            'data_class'         => $this->class,
+            'csrf_token_id'      => 'registration',
+            'translation_domain' => 'NucleosProfileBundle',
         ]);
     }
 }

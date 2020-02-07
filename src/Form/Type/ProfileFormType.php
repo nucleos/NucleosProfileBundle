@@ -40,12 +40,10 @@ final class ProfileFormType extends AbstractType
         $builder
             ->add('locale', LocaleType::class, [
                 'label'              => 'form.locale',
-                'translation_domain' => 'NucleosProfileBundle',
                 'required'           => false,
             ])
             ->add('timezone', TimezoneType::class, [
                 'label'              => 'form.timezone',
-                'translation_domain' => 'NucleosProfileBundle',
                 'required'           => false,
             ])
         ;
@@ -54,8 +52,9 @@ final class ProfileFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'    => $this->class,
-            'csrf_token_id' => 'profile',
+            'data_class'         => $this->class,
+            'csrf_token_id'      => 'profile',
+            'translation_domain' => 'NucleosProfileBundle',
         ]);
     }
 }
