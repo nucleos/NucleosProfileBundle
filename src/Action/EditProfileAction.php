@@ -11,6 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Action;
 
+use LogicException;
 use Nucleos\ProfileBundle\Form\Model\Profile;
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
@@ -99,7 +100,7 @@ final class EditProfileAction
             return $event->getResponse();
         }
 
-        $formModel = $this->createFormModel();
+        $formModel = $this->createFormModel($user);
 
         $form      = $this->formFactory->create(ProfileFormType::class, $formModel, [
             'validation_groups' => ['Profile', 'Default'],
@@ -135,8 +136,12 @@ final class EditProfileAction
         );
     }
 
-    private function createFormModel(): Profile
+    private function createFormModel(UserInterface $user): Profile
     {
-        return new $this->formModel();
+        if (!is_a($this->formModel, Profile::class)) {
+            throw new LogicException(sprintf('The "%s" is not a valid "%s" class', $this->formModel, Profile::class));
+        }
+
+        return ($this->formModel)::fromUser($user);
     }
 }
