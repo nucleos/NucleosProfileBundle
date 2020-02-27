@@ -1,3 +1,11 @@
+# 1.1.1
+
+## Changes
+
+## 🐛 Bug Fixes
+
+- Fix check for custom profile model @core23 (#15)
+
 # 1.1.0
 
 ## Changes
