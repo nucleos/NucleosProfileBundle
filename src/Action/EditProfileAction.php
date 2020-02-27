@@ -138,7 +138,7 @@ final class EditProfileAction
 
     private function createFormModel(UserInterface $user): Profile
     {
-        if (!is_a($this->formModel, Profile::class)) {
+        if (!is_a($this->formModel, Profile::class, true)) {
             throw new LogicException(sprintf('The "%s" is not a valid "%s" class', $this->formModel, Profile::class));
         }
 
