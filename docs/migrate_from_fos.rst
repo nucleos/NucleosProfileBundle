@@ -1,4 +1,0 @@
-Migrate from FOSUserBundle
-==========================
-
-Tbd.
