@@ -10,7 +10,7 @@ NucleosProfileBundle
 [![Daily Downloads](https://poser.pugx.org/nucleos/profile-bundle/d/daily)](https://packagist.org/packages/nucleos/profile-bundle)
 
 [![Continuous Integration](https://github.com/nucleos/NucleosProfileBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosProfileBundle/actions)
-[![Code Coverage](https://codecov.io/gh/nucleos/NucleosProfileBundle/branch/master/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosProfileBundle)
+[![Code Coverage](https://codecov.io/gh/nucleos/NucleosProfileBundle/branch/main/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosProfileBundle)
 
 The NucleosProfileBundle is an extension for [NucleosUserBundle](https://github.com/nucleos/NucleosUserBundle/) which provides profile management and registration. This is a splitted fork of [FOSProfileBundle](https://github.com/FriendsOfSymfony/FOSProfileBundle/).
 
