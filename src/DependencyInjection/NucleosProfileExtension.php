@@ -13,8 +13,9 @@ namespace Nucleos\ProfileBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Config\Loader\FileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 final class NucleosProfileExtension extends Extension
@@ -29,10 +30,10 @@ final class NucleosProfileExtension extends Extension
 
         $config = $processor->processConfiguration($configuration, $configs);
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new PhpFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         foreach (['mailer', 'listeners'] as $basename) {
-            $loader->load(sprintf('%s.xml', $basename));
+            $loader->load(sprintf('%s.php', $basename));
         }
 
         if (!$config['use_authentication_listener']) {
@@ -40,7 +41,7 @@ final class NucleosProfileExtension extends Extension
         }
 
         if ($config['use_flash_notifications']) {
-            $loader->load('flash_notifications.xml');
+            $loader->load('flash_notifications.php');
         }
 
         $this->loadRegistration($config['registration'], $container, $loader);
@@ -52,12 +53,12 @@ final class NucleosProfileExtension extends Extension
     /**
      * @param array<mixed> $config
      */
-    private function loadRegistration(array $config, ContainerBuilder $container, XmlFileLoader $loader): void
+    private function loadRegistration(array $config, ContainerBuilder $container, FileLoader $loader): void
     {
-        $loader->load('registration.xml');
+        $loader->load('registration.php');
 
         if ($config['confirmation']['enabled']) {
-            $loader->load('email_confirmation.xml');
+            $loader->load('email_confirmation.php');
         }
 
         $container->setParameter('nucleos_profile.registration.form.model', $config['form']['model']);
@@ -67,9 +68,9 @@ final class NucleosProfileExtension extends Extension
     /**
      * @param array<mixed> $config
      */
-    private function loadProfile(array $config, ContainerBuilder $container, XmlFileLoader $loader): void
+    private function loadProfile(array $config, ContainerBuilder $container, FileLoader $loader): void
     {
-        $loader->load('profile.xml');
+        $loader->load('profile.php');
 
         $container->setParameter('nucleos_profile.profile.form.model', $config['form']['model']);
     }
