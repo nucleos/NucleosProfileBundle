@@ -21,7 +21,7 @@ return static function (ContainerConfigurator $container): void {
             ->tag('kernel.event_subscriber')
             ->args([
                 new Reference('nucleos_profile.mailer'),
-                new Reference('nucleos_profile.util.token_generator'),
+                new Reference('nucleos_user.util.token_generator'),
                 new Reference('router'),
                 new Reference('session'),
             ])
