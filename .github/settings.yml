@@ -6,7 +6,7 @@ repository:
   name: NucleosProfileBundle
   description: 👤 Registration and profile management for symfony
   homepage: https://docs.nucleos.rocks/projects/profile-bundle/
-  topics: symfony, symfony-bundle, bundle, user, management, profile, registration
+  topics: hacktoberfest, symfony, symfony-bundle, bundle, user, management, profile, registration
 
 branches:
   - name: main
