@@ -18,6 +18,7 @@ use Nucleos\ProfileBundle\Action\RegistrationConfirmedAction;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
 use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 return static function (ContainerConfigurator $container): void {
     $container->services()
@@ -26,6 +27,8 @@ return static function (ContainerConfigurator $container): void {
             ->tag('form.type')
             ->args([
                 new Parameter('nucleos_profile.registration.form.model'),
+                new Reference('nucleos_user.user_manager'),
+                new Reference(ValidatorInterface::class),
             ])
 
         ->set(RegistrationAction::class)

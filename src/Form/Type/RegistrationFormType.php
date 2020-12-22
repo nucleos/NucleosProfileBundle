@@ -11,14 +11,22 @@
 
 namespace Nucleos\ProfileBundle\Form\Type;
 
+use Nucleos\ProfileBundle\Form\Model\Registration;
+use Nucleos\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Event\PostSetDataEvent;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Validator\ViolationMapper\ViolationMapper;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\ConstraintViolation;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Throwable;
 
 final class RegistrationFormType extends AbstractType
 {
@@ -28,11 +36,29 @@ final class RegistrationFormType extends AbstractType
     private $class;
 
     /**
+     * @var UserManagerInterface
+     */
+    private $userManager;
+
+    /**
+     * @var ValidatorInterface
+     */
+    private $validator;
+
+    /**
+     * @var ViolationMapper
+     */
+    private $violationMapper;
+
+    /**
      * @param string $class The User class name
      */
-    public function __construct(string $class)
+    public function __construct(string $class, UserManagerInterface $userManager, ValidatorInterface $validator)
     {
-        $this->class = $class;
+        $this->class           = $class;
+        $this->validator       = $validator;
+        $this->userManager     = $userManager;
+        $this->violationMapper = new ViolationMapper();
     }
 
     /**
@@ -61,6 +87,13 @@ final class RegistrationFormType extends AbstractType
             ->add('save', SubmitType::class, [
                 'label'  => 'registration.submit',
             ])
+            ->addEventListener(FormEvents::POST_SET_DATA, function (PostSetDataEvent $event) use ($options): void {
+                $errors = $this->getUserErrors($event->getData(), $options['validation_groups']);
+
+                foreach ($errors as $error) {
+                    $this->violationMapper->mapViolation($error, $event->getForm());
+                }
+            })
         ;
     }
 
@@ -71,5 +104,26 @@ final class RegistrationFormType extends AbstractType
             'csrf_token_id'      => 'registration',
             'translation_domain' => 'NucleosProfileBundle',
         ]);
+    }
+
+    /**
+     * @param mixed    $registration
+     * @param string[] $validationGroups
+     *
+     * @return ConstraintViolation[]
+     */
+    private function getUserErrors($registration, array $validationGroups): array
+    {
+        if (!$registration instanceof Registration) {
+            return [];
+        }
+
+        try {
+            $registration = $registration->toUser($this->userManager);
+        } catch (Throwable $exception) {
+            return [];
+        }
+
+        return iterator_to_array($this->validator->validate($registration, null, $validationGroups));
     }
 }

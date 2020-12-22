@@ -13,9 +13,36 @@ namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
 use Nucleos\ProfileBundle\Form\Model\Registration;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
+use Nucleos\UserBundle\Model\UserManagerInterface;
+use Symfony\Component\Form\Extension\Validator\ViolationMapper\ViolationMapper;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
 {
+    /**
+     * @var UserManagerInterface
+     */
+    private $userManager;
+
+    /**
+     * @var ValidatorInterface
+     */
+    private $validator;
+
+    /**
+     * @var ViolationMapper
+     */
+    private $violationMapper;
+
+    protected function setUp(): void
+    {
+        $this->userManager     = $this->createMock(UserManagerInterface::class);
+        $this->validator       = $this->createMock(ValidatorInterface::class);
+        $this->violationMapper = $this->createMock(ViolationMapper::class);
+
+        parent::setUp();
+    }
+
     public function testSubmit(): void
     {
         $registration = new Registration();
@@ -46,7 +73,11 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         return array_merge(
             parent::getTypes(),
             [
-                new RegistrationFormType(Registration::class),
+                new RegistrationFormType(
+                    Registration::class,
+                    $this->userManager,
+                    $this->validator
+                ),
             ]
         );
     }
