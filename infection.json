@@ -10,5 +10,5 @@
     },
     "ignoreMsiWithNoMutations": true,
     "minMsi": 15,
-    "minCoveredMsi": 45
+    "minCoveredMsi": 40
 }
