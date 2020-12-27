@@ -1,3 +1,22 @@
+# 1.2.0
+
+## Changes
+
+- Move submit buttons to form definition @core23 (#134)
+
+## 🚀 Features
+
+- Move configuration to PHP @core23 (#28)
+
+## 🐛 Bug Fixes
+
+- Delegate validation constraints to registration @core23 (#141)
+- Fix wrong EmailConfirmationListener argument @seizan8 (#35)
+
+## 📦 Dependencies
+
+- Add support for PHP 8 @core23 (#117)
+
 # 1.1.1
 
 ## Changes
