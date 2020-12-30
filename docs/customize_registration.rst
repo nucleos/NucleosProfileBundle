@@ -15,9 +15,7 @@ If you want to modify the Registration form in your project there are a few step
 
 1. Extend ``Nucleos\ProfileBundle\Form\Model\Registration``
 
-.. code-block:: php
-
-    <?php
+.. code-block:: php-annotations
 
     namespace App\Form\Model;
 
@@ -58,9 +56,7 @@ If you want to modify the Registration form in your project there are a few step
 
 3. Use Symfony Form Extensions to add fields. You can use builder to remove or modify fields as well.
 
-.. code-block:: php
-
-    <?php
+.. code-block:: php-annotations
 
     namespace App\Form\Type;
 
