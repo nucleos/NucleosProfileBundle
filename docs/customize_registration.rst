@@ -60,8 +60,8 @@ If you want to modify the Registration form in your project there are a few step
 
     namespace App\Form\Type;
 
-    use Symfony\Component\Form\AbstractTypeExtension;
     use Symfony\Component\Form\FormBuilderInterface;
+    use Symfony\Component\Form\AbstractTypeExtension;
     use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
     class RegistrationFormType extends AbstractTypeExtension
