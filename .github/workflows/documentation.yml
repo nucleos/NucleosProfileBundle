@@ -19,10 +19,10 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v2.3.4
 
-      - name: "Set up Python 3.7"
+      - name: "Set up Python 3.9"
         uses: actions/setup-python@v2.2.1
         with:
-          python-version: '3.7' # Semantic version range syntax or exact version of a Python version
+          python-version: '3.9'
 
       - name: "Display Python version"
         run: python -c "import sys; print(sys.version)"
@@ -56,6 +56,6 @@ jobs:
       - name: "Run DOCtor-RST"
         uses: docker://oskarstark/doctor-rst
         with:
-          args: --short
+          args: --short --error-format=github
         env:
           DOCS_DIR: 'docs/'
