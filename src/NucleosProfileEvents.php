@@ -57,7 +57,7 @@ final class NucleosProfileEvents
      *
      * This event allows you to set the response instead of using the default one.
      *
-     * @Event("Nucleos\UserBundle\Event\FormEvent")
+     * @Event("Nucleos\ProfileBundle\Event\UserFormEvent")
      */
     public const REGISTRATION_SUCCESS = 'nucleos_profile.registration.success';
 

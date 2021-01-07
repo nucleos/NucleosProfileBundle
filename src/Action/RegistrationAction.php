@@ -12,6 +12,7 @@
 namespace Nucleos\ProfileBundle\Action;
 
 use Nucleos\ProfileBundle\Event\GetResponseRegistrationEvent;
+use Nucleos\ProfileBundle\Event\UserFormEvent;
 use Nucleos\ProfileBundle\Form\Model\Registration;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
@@ -119,7 +120,7 @@ final class RegistrationAction
     {
         $user = $formModel->toUser($this->userManager);
 
-        $event = new FormEvent($form, $request);
+        $event = new UserFormEvent($user, $form, $request);
         $this->eventDispatcher->dispatch($event, NucleosProfileEvents::REGISTRATION_SUCCESS);
 
         $this->userManager->updateUser($user);
