@@ -61,7 +61,7 @@ return static function (ContainerConfigurator $container): void {
         ->set(RegistrationConfirmedAction::class)
             ->public()
             ->args([
-                new Reference('router'),
+                new Reference('twig'),
                 new Reference('security.helper'),
                 new Reference('security.token_storage'),
             ])

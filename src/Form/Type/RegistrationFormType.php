@@ -25,6 +25,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\ConstraintViolation;
+use Symfony\Component\Validator\ConstraintViolationInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Throwable;
 
@@ -91,6 +92,8 @@ final class RegistrationFormType extends AbstractType
                 $errors = $this->getUserErrors($event->getData(), (array) $options['validation_groups']);
 
                 foreach ($errors as $error) {
+                    \assert($error instanceof ConstraintViolation);
+
                     $this->violationMapper->mapViolation($error, $event->getForm());
                 }
             })
@@ -111,7 +114,7 @@ final class RegistrationFormType extends AbstractType
      * @param mixed    $registration
      * @param string[] $validationGroups
      *
-     * @return ConstraintViolation[]
+     * @return ConstraintViolationInterface[]
      */
     private function getUserErrors($registration, array $validationGroups): array
     {
