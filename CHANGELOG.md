@@ -1,3 +1,13 @@
+# 1.3.0
+
+## Changes
+
+- Added custom event to fix email confirmation system @fkrauthan (#156)
+
+## 🐛 Bug Fixes
+
+- Fix `RegistrationConfirmedAction` autowiring @core23 (#172)
+
 # 1.2.0
 
 ## Changes
