@@ -2,11 +2,11 @@
 
 ## Changes
 
-- Added custom event to fix email confirmation system @fkrauthan (#156)
+- Added custom event to fix email confirmation system [@fkrauthan] ([#156])
 
 ## 🐛 Bug Fixes
 
-- Fix `RegistrationConfirmedAction` autowiring @core23 (#172)
+- Fix `RegistrationConfirmedAction` autowiring [@core23] ([#172])
 
 # 1.2.0
 
@@ -61,3 +61,6 @@
 [#35]: https://github.com/nucleos/NucleosProfileBundle/pull/35
 [#28]: https://github.com/nucleos/NucleosProfileBundle/pull/28
 [@seizan8]: https://github.com/seizan8
+[#172]: https://github.com/nucleos/NucleosProfileBundle/pull/172
+[#156]: https://github.com/nucleos/NucleosProfileBundle/pull/156
+[@fkrauthan]: https://github.com/fkrauthan
