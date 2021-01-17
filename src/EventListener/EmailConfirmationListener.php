@@ -11,10 +11,9 @@
 
 namespace Nucleos\ProfileBundle\EventListener;
 
+use Nucleos\ProfileBundle\Event\UserFormEvent;
 use Nucleos\ProfileBundle\Mailer\MailerInterface;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
-use Nucleos\UserBundle\Event\FormEvent;
-use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\Util\TokenGeneratorInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -65,14 +64,9 @@ final class EmailConfirmationListener implements EventSubscriberInterface
         ];
     }
 
-    public function onRegistrationSuccess(FormEvent $event): void
+    public function onRegistrationSuccess(UserFormEvent $event): void
     {
-        $user = $event->getForm()->getData();
-
-        if (!$user instanceof UserInterface) {
-            return;
-        }
-
+        $user = $event->getUser();
         $user->setEnabled(false);
 
         if (null === $user->getConfirmationToken()) {
