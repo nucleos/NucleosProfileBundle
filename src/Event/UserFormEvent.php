@@ -17,7 +17,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserFormEvent extends FormEvent
+final class UserFormEvent extends FormEvent
 {
     /**
      * @var UserInterface
