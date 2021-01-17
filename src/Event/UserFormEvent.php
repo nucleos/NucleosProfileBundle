@@ -11,11 +11,10 @@
 
 namespace Nucleos\ProfileBundle\Event;
 
-use Nucleos\UserBundle\Event\FormEvent ;
+use Nucleos\UserBundle\Event\FormEvent;
 use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 final class UserFormEvent extends FormEvent
 {
