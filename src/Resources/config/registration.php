@@ -55,7 +55,7 @@ return static function (ContainerConfigurator $container): void {
             ->args([
                 new Reference('event_dispatcher'),
                 new Reference('nucleos_user.user_manager'),
-                new Reference('twig'),
+                new Reference('router'),
             ])
 
         ->set(RegistrationConfirmedAction::class)
