@@ -9,7 +9,7 @@ repository:
   topics: hacktoberfest, symfony, symfony-bundle, bundle, user, management, profile, registration
 
 branches:
-  - name: main
+  - name: "*.x"
     protection:
       enforce_admins: false
       required_status_checks:
