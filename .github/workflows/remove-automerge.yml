@@ -14,7 +14,7 @@ jobs:
       - name: "Remove label"
         uses: "actions/github-script@v3"
         with:
-          github-token: ${{ secrets.NUCLEOS_BOT_TOKEN }}
+          github-token: ${{ secrets.ORGANIZATION_ADMIN_TOKEN }}
           script: |
             github.issues.removeLabel({
               issue_number: context.payload.pull_request.number,
