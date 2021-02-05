@@ -1,51 +1,77 @@
-# 1.3.0
+# Changelog
 
-## Changes
+All notable changes to this project will be documented in this file, in reverse chronological order by release.
+
+## 1.3.1 - TBD
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
+## 1.3.0 - 2021-01-17
+
+### Changes
 
 - Added custom event to fix email confirmation system [@fkrauthan] ([#156])
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Fix `RegistrationConfirmedAction` autowiring [@core23] ([#172])
 
-# 1.2.0
+## 1.2.0
 
-## Changes
+### Changes
 
 - Move submit buttons to form definition [@core23] ([#134])
 
-## 🚀 Features
+### 🚀 Features
 
 - Move configuration to PHP [@core23] ([#28])
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Delegate validation constraints to registration [@core23] ([#141])
 - Fix wrong EmailConfirmationListener argument [@seizan8] ([#35])
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 - Add support for PHP 8 [@core23] ([#117])
 
-# 1.1.1
+## 1.1.1
 
-## Changes
+### Changes
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Fix check for custom profile model [@core23] ([#15])
 
-# 1.1.0
+## 1.1.0
 
-## Changes
+### Changes
 
-## 🚀 Features
+### 🚀 Features
 
 - Use bootstrap 3 layout as default form theme [@core23] ([#13])
 - Set translation domain for whole form [@core23] ([#12])
 - Make from mail optional [@core23] ([#10])
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Fix profile editing [@core23] ([#14])
 
