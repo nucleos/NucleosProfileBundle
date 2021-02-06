@@ -30,4 +30,6 @@ branches:
         strict: true
 
       required_pull_request_reviews: null
-      restrictions: null
+      restrictions:
+        users: 
+          - nucleos-bot
