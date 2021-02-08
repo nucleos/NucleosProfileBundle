@@ -1,4 +1,5 @@
 on:
+  create:
   pull_request:
   push:
     branches:
