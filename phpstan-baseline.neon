@@ -1,22 +1,7 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeDefinition\\:\\:children\\(\\)\\.$#"
-			count: 1
-			path: src/DependencyInjection/Configuration.php
-
-		-
-			message: "#^Parameter \\#1 \\$node of method Nucleos\\\\ProfileBundle\\\\DependencyInjection\\\\Configuration\\:\\:addRegistrationSection\\(\\) expects Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\ArrayNodeDefinition, Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeDefinition given\\.$#"
-			count: 1
-			path: src/DependencyInjection/Configuration.php
-
-		-
-			message: "#^Parameter \\#1 \\$node of method Nucleos\\\\ProfileBundle\\\\DependencyInjection\\\\Configuration\\:\\:addProfileSection\\(\\) expects Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\ArrayNodeDefinition, Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeDefinition given\\.$#"
-			count: 1
-			path: src/DependencyInjection/Configuration.php
-
-		-
-			message: "#^Parameter \\#1 \\$node of method Nucleos\\\\ProfileBundle\\\\DependencyInjection\\\\Configuration\\:\\:addServiceSection\\(\\) expects Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\ArrayNodeDefinition, Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeDefinition given\\.$#"
+			message: "#^Cannot call method booleanNode\\(\\) on Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeParentInterface\\|null\\.$#"
 			count: 1
 			path: src/DependencyInjection/Configuration.php
 
