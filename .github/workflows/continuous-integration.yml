@@ -1,4 +1,7 @@
+name: 'Continuous Integration'
+
 on:
+  create:
   pull_request:
       types: [ opened, synchronize, reopened ]
   push:
@@ -6,8 +9,6 @@ on:
       - "*.x"
     tags:
       - "**"
-
-name: "Continuous Integration"
 
 jobs:
   coding-standards:
