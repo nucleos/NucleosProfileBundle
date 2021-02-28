@@ -48,7 +48,7 @@ Enable the bundle in the kernel:
     // config/bundles.php
     return [
         // ...
-        Nucleos\UserBundle\NucleosProfileBundle::class => ['all' => true],
+        Nucleos\ProfileBundle\NucleosProfileBundle::class => ['all' => true],
         // ...
     ]
 
