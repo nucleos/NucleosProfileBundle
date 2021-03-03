@@ -10,7 +10,7 @@ registration:
     check_email: |
         Un courriel a été envoyé à l'adresse %email%. Il contient un lien d'activation sur lequel vous devez cliquer pour activer votre compte.
     confirmed: 'Félicitations %username%, votre compte est à présent activé.'
-    back: 'Retour à la page d'origine.'
+    back: Retour à la page d'origine.
     submit: Créer le compte
     flash:
         user_created: 'Le compte utilisateur a été créé avec succès.'
@@ -24,7 +24,7 @@ registration:
             Ce lien ne peut être utilisé qu'une seule fois pour valider votre compte.
 
             Cordialement,
-            
+
             l'équipe.
 form:
     group_name: 'Nom du groupe'
