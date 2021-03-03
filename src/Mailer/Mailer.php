@@ -11,7 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Mailer;
 
-use Nucleos\UserBundle\Mailer\Mail\ResettingMail;
+use Nucleos\ProfileBundle\Mailer\Mail\RegistrationMail;
 use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface as SymfonyMailer;
@@ -64,7 +64,7 @@ final class Mailer implements MailerInterface
             UrlGeneratorInterface::ABSOLUTE_URL
         );
 
-        $mail = (new ResettingMail())
+        $mail = (new RegistrationMail())
             ->to(new Address($user->getEmail()))
             ->subject($this->translator->trans('registration.email.subject', [
                 '%username%' => $user->getUsername(),
