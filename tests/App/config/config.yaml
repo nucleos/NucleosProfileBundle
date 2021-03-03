@@ -1,45 +1,45 @@
 framework:
-    secret: secret
+  secret: secret
 
-    form:
-        enabled: true
+  form:
+    enabled: true
 
-    test: ~
+  test: ~
 
-    mailer:
-        transports:
-            dsn: 'null://null'
+  mailer:
+    transports:
+      dsn: 'null://null'
 
-    translator: ~
+  translator: ~
 
-    session:
-        storage_id: session.storage.mock_file
-        handler_id: session.handler.native_file
+  session:
+    storage_id: session.storage.mock_file
+    handler_id: session.handler.native_file
 
 doctrine:
-    dbal:
-        default_connection: default
-        connections:
-            default:
-                driver:   pdo_sqlite
-                memory:   true
+  dbal:
+    default_connection: default
+    connections:
+      default:
+        driver: pdo_sqlite
+        memory: true
 
-    orm:
-        auto_mapping: true
+  orm:
+    auto_mapping: true
 
 nucleos_user:
-    db_driver:      orm
-    firewall_name:  main
+  db_driver: orm
+  firewall_name: main
 
-    from_email:  'no-reply@localhost'
+  from_email: 'no-reply@localhost'
 
-    user_class:  'Nucleos\ProfileBundle\Tests\App\Entity\User'
+  user_class: 'Nucleos\ProfileBundle\Tests\App\Entity\User'
 
-    group:
-        group_class: 'Nucleos\ProfileBundle\Tests\App\Entity\Group'
+  group:
+    group_class: 'Nucleos\ProfileBundle\Tests\App\Entity\Group'
 
 
 nucleos_profile:
-    registration:
-        confirmation:
-            from_email:  'no-reply@localhost'
+  registration:
+    confirmation:
+      from_email: 'no-reply@localhost'

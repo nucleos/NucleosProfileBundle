@@ -1,39 +1,39 @@
 profile:
-    show:
-        username: Nom d'utilisateur
-        email: Adresse de courriel
-    edit:
-        submit: Mettre à jour
-    flash:
-        updated: 'Le profil a été mis à jour.'
-registration:
-    check_email: |
-        Un courriel a été envoyé à l'adresse %email%. Il contient un lien d'activation sur lequel vous devez cliquer pour activer votre compte.
-    confirmed: 'Félicitations %username%, votre compte est à présent activé.'
-    back: Retour à la page d'origine.
-    submit: Créer le compte
-    flash:
-        user_created: 'Le compte utilisateur a été créé avec succès.'
-    email:
-        subject: 'Bienvenu %username%!'
-        message: |
-            Bonjour %username% !
-
-            Pour activer définitivement votre compte, merci de visiter la page %confirmationUrl%
-
-            Ce lien ne peut être utilisé qu'une seule fois pour valider votre compte.
-
-            Cordialement,
-
-            l'équipe.
-form:
-    group_name: 'Nom du groupe'
-    username: Utilisateur
+  show:
+    username: Nom d'utilisateur
     email: Adresse de courriel
-    current_password: 'Mot de passe actuel'
-    password: Mot de passe
-    password_confirmation: 'Répéter le mot de passe'
-    new_password: 'Nouveau mot de passe'
-    new_password_confirmation: 'Répéter le mot de passe'
-    timezone: 'Fuseau horaire'
-    locale: 'Préférences de langage'
+  edit:
+    submit: Mettre à jour
+  flash:
+    updated: 'Le profil a été mis à jour.'
+registration:
+  check_email: |
+    Un courriel a été envoyé à l'adresse %email%. Il contient un lien d'activation sur lequel vous devez cliquer pour activer votre compte.
+  confirmed: 'Félicitations %username%, votre compte est à présent activé.'
+  back: Retour à la page d'origine.
+  submit: Créer le compte
+  flash:
+    user_created: 'Le compte utilisateur a été créé avec succès.'
+  email:
+    subject: 'Bienvenu %username%!'
+    message: |
+      Bonjour %username% !
+
+      Pour activer définitivement votre compte, merci de visiter la page %confirmationUrl%
+
+      Ce lien ne peut être utilisé qu'une seule fois pour valider votre compte.
+
+      Cordialement,
+
+      l'équipe.
+form:
+  group_name: 'Nom du groupe'
+  username: Utilisateur
+  email: Adresse de courriel
+  current_password: 'Mot de passe actuel'
+  password: Mot de passe
+  password_confirmation: 'Répéter le mot de passe'
+  new_password: 'Nouveau mot de passe'
+  new_password_confirmation: 'Répéter le mot de passe'
+  timezone: 'Fuseau horaire'
+  locale: 'Préférences de langage'
