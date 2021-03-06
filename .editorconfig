@@ -10,16 +10,16 @@ trim_trailing_whitespace = true
 [*.php]
 indent_size = 4
 
+[*.neon]
+indent_style = tab
+
 [*.twig]
 indent_size = 4
 
 [*.{yaml,yml}]
-indent_size = 4
-
-[*.{js,scss,css}]
 indent_size = 2
 
-[Jenkinsfile]
+[*.{js,scss,css}]
 indent_size = 2
 
 [*.json]
