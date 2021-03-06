@@ -2,27 +2,29 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.4.0 - TBD
+## 1.4.0 - 2021-03-06
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [1.4.0](https://github.com/nucleos/NucleosProfileBundle/milestone/3)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 1.4.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **3**
+- Total contributors: **2**
 
-### Removed
+#### Bug
 
-- Nothing.
+ - [241: Fix the mail class used for registration](https://github.com/nucleos/NucleosProfileBundle/pull/241) thanks to @lgeorget
+ - [239: Fix YAML syntax error.](https://github.com/nucleos/NucleosProfileBundle/pull/239) thanks to @alexsegura
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [238: Add a French translation for the bundle](https://github.com/nucleos/NucleosProfileBundle/pull/238) thanks to @lgeorget
 
 ## 1.3.1 - 2021-02-06
 
