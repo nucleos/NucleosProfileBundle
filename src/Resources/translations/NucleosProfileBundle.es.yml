@@ -1,0 +1,38 @@
+profile:
+    show:
+        username: Nombre de usuario
+        email: Correo electrónico
+    edit:
+        submit: Actualizar
+    flash:
+        updated: 'El perfil ha sido actualizado.'
+registration:
+    check_email: |
+        Se ha enviado un correo electrónico a %email%. Contiene un enlace de activación al que debes acceder para activar tu cuenta.
+    confirmed: 'Felicidades %username%, tu cuenta está ahora confirmada.'
+    back: Volver a la página original.
+    submit: Darse de alta
+    flash:
+        user_created: El usuario ha sido creado con éxito.
+    email:
+        subject: '¡Bienvenido %username%!'
+        message: |
+            ¡Hola %username%!
+
+            Para completar la validación de tu cuenta, por favor visita %confirmationUrl%
+
+            Este enlace sólo puede utilizarse una vez para validar tu cuenta.
+
+            Atentamente,
+            el equipo.
+form:
+    group_name: Nombre de grupo
+    username: Nombre de usuario
+    email: Correo electrónico
+    current_password: Contraseña actual
+    password: Contraseña
+    password_confirmation: Repita la contraseña
+    new_password: Nueva contraseña
+    new_password_confirmation: Repita la contraseña
+    timezone: Zona horaria
+    locale: Idioma
