@@ -28,7 +28,7 @@ registration:
             l'équipe.
 form:
     group_name: 'Nom du groupe'
-    username: Utilisateur
+    username: Nom d'utilisateur
     email: Adresse de courriel
     current_password: 'Mot de passe actuel'
     password: Mot de passe
