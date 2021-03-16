@@ -25,9 +25,6 @@ jobs:
       - name: "Display Python version"
         run: python -c "import sys; print(sys.version)"
 
-      - name: "Install Sphinx dependencies"
-        run: sudo apt-get install python-dev build-essential
-
       - name: "Cache pip"
         uses: actions/cache@v2.1.4
         with:
