@@ -83,7 +83,7 @@ final class RegistrationFormType extends AbstractType
                 ],
                 'first_options'   => ['label' => 'form.password'],
                 'second_options'  => ['label' => 'form.password_confirmation'],
-                'invalid_message' => 'nucleos_profile.password.mismatch',
+                'invalid_message' => 'nucleos_user.password.mismatch',
             ])
             ->add('save', SubmitType::class, [
                 'label'  => 'registration.submit',
