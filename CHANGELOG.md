@@ -2,27 +2,29 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.5.0 - TBD
+## 1.5.0 - 2021-06-11
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [1.5.0](https://github.com/nucleos/NucleosProfileBundle/milestone/6)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 1.5.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **3**
+- Total contributors: **2**
 
-### Removed
+#### Bug
 
-- Nothing.
+ - [314: Fix using wrong password validation message](https://github.com/nucleos/NucleosProfileBundle/pull/314) thanks to @core23
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [313: Add intl dependency to use LocaleType](https://github.com/nucleos/NucleosProfileBundle/pull/313) thanks to @core23
+ - [249: Fix French + add Spanish](https://github.com/nucleos/NucleosProfileBundle/pull/249) thanks to @alexsegura
 
 ## 1.4.0 - 2021-03-06
 
