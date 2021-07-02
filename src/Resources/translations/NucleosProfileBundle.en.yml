@@ -25,6 +25,15 @@ registration:
 
             Regards,
             the Team.
+        html: |
+            <p>Hello %username%!</p>
+
+            <p>To finish activating your account - please visit <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+
+            <p>This link can only be used once to validate your account.</p>
+
+            <p>Regards,</p>
+            <p>the Team.</p>
 form:
     group_name: 'Group name'
     username: Username
