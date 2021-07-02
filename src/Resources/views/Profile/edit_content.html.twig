@@ -1,7 +1,5 @@
 {% trans_default_domain 'NucleosProfileBundle' %}
 
-{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
-
 {{ form_start(form, { 'action': path('nucleos_profile_profile_edit'), 'attr': { 'class': 'nucleos_profile_profile_edit' } }) }}
     {{ form_widget(form) }}
 {{ form_end(form) }}
