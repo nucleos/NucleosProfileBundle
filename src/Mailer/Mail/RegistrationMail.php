@@ -32,7 +32,8 @@ final class RegistrationMail extends TemplatedEmail
     {
         parent::__construct($headers, $body);
 
-        $this->htmlTemplate('@NucleosProfile/Registration/email.txt.twig');
+        $this->textTemplate('@NucleosProfile/Registration/email.txt.twig');
+        $this->htmlTemplate('@NucleosProfile/Registration/email.html.twig');
     }
 
     public function setConfirmationUrl(string $confirmationUrl): self

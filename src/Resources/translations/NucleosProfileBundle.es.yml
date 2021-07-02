@@ -25,6 +25,15 @@ registration:
 
             Atentamente,
             el equipo.
+        html: |
+            <p>¡Hola %username%!</p>
+
+            <p>Para completar la validación de tu cuenta, por favor visita <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+
+            <p>Este enlace sólo puede utilizarse una vez para validar tu cuenta.</p>
+
+            <p>Atentamente,</p>
+            <p>el equipo.</p>
 form:
     group_name: Nombre de grupo
     username: Nombre de usuario

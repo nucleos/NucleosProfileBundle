@@ -22,6 +22,13 @@ registration:
 
             Mit besten Grüßen,
             das Team.
+        html: |
+            <p>Hallo %username%!</p>
+
+            <p>Besuchen Sie bitte folgende Seite, um Ihr Benutzerkonto zu bestätigen: <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+
+            <p>Mit besten Grüßen,</p>
+            <p>das Team.</p>
 form:
     group_name: Gruppenname
     username: Benutzername
