@@ -30,7 +30,7 @@ final class NucleosProfileEvents
      *
      * This event allows you to set the response instead of using the default one.
      *
-     * @Event("Nucleos\UserBundle\Event\FormEvent")
+     * @Event("Nucleos\UserBundle\Event\UserFormEvent")
      */
     public const PROFILE_EDIT_SUCCESS = 'nucleos_profile.profile.edit.success';
 

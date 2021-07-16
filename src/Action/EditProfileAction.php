@@ -12,11 +12,11 @@
 namespace Nucleos\ProfileBundle\Action;
 
 use LogicException;
+use Nucleos\ProfileBundle\Event\UserFormEvent;
 use Nucleos\ProfileBundle\Form\Model\Profile;
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
-use Nucleos\UserBundle\Event\FormEvent;
 use Nucleos\UserBundle\Event\GetResponseUserEvent;
 use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\Model\UserManagerInterface;
@@ -111,7 +111,7 @@ final class EditProfileAction
         if ($form->isSubmitted() && $form->isValid()) {
             $formModel->updateUser($user);
 
-            $event = new FormEvent($form, $request);
+            $event = new UserFormEvent($user, $form, $request);
             $this->eventDispatcher->dispatch($event, NucleosProfileEvents::PROFILE_EDIT_SUCCESS);
 
             $this->userManager->updateUser($user);
