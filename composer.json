@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^7.3 || ^8.0",
-        "egulias/email-validator": "^2.1.10",
+        "egulias/email-validator": "^2.1.10 || ^3.0",
         "nucleos/user-bundle": "^1.7",
         "symfony/config": "^4.4 || ^5.0",
         "symfony/dependency-injection": "^4.4 || ^5.0",
