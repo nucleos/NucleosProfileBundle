@@ -2,27 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.7.0 - TBD
+## 1.7.0 - 2021-09-27
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [1.7.0](https://github.com/nucleos/NucleosProfileBundle/milestone/10)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 1.7.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **2**
+- Total contributors: **2**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [368: Remove egulias/email-validator dependency](https://github.com/nucleos/NucleosProfileBundle/pull/368) thanks to @alexsegura
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [333: Allow user manipulation on PROFILE&#95;EDIT&#95;SUCCESS](https://github.com/nucleos/NucleosProfileBundle/pull/333) thanks to @core23
 
 ## 1.6.0 - 2021-07-02
 
