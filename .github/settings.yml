@@ -16,13 +16,9 @@ branches:
         contexts:
           - "Coding Standards (8)"
           - "Static Code Analysis (8)"
-          - "Test (PHP 7.4, symfony 4.4, lowest)"
           - "Test (PHP 7.4, symfony 5.3, lowest)"
-          - "Test (PHP 7.4, symfony 4.4, highest)"
           - "Test (PHP 7.4, symfony 5.3, highest)"
-          - "Test (PHP 8, symfony 4.4, lowest)"
           - "Test (PHP 8, symfony 5.3, lowest)"
-          - "Test (PHP 8, symfony 4.4, highest)"
           - "Test (PHP 8, symfony 5.3, highest)"
           - "Code Coverage (8)"
           - "Mutation Tests (8)"
