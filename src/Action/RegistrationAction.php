@@ -19,6 +19,7 @@ use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Event\FormEvent;
 use Nucleos\UserBundle\Model\UserManagerInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -87,9 +88,14 @@ final class RegistrationAction
             return $event->getResponse();
         }
 
-        $form      = $this->formFactory->create(RegistrationFormType::class, $formModel, [
-            'validation_groups' => ['Registration', 'Default'],
-        ]);
+        $form      = $this->formFactory
+            ->create(RegistrationFormType::class, $formModel, [
+                'validation_groups' => ['Registration', 'Default'],
+            ])
+            ->add('save', SubmitType::class, [
+                'label'  => 'registration.submit',
+            ])
+        ;
 
         $form->handleRequest($request);
 

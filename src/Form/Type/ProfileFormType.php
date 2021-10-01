@@ -13,7 +13,6 @@ namespace Nucleos\ProfileBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\LocaleType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -46,9 +45,6 @@ final class ProfileFormType extends AbstractType
             ->add('timezone', TimezoneType::class, [
                 'label'              => 'form.timezone',
                 'required'           => false,
-            ])
-            ->add('save', SubmitType::class, [
-                'label'  => 'profile.edit.submit',
             ])
         ;
     }
