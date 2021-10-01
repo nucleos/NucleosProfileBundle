@@ -20,24 +20,12 @@ use Twig\Environment;
 
 final class CheckRegistrationMailAction
 {
-    /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
+    private UserManagerInterface $userManager;
 
-    /**
-     * @var Environment
-     */
-    private $twig;
+    private Environment $twig;
 
-    /**
-     * @var RouterInterface
-     */
-    private $router;
+    private RouterInterface $router;
 
-    /**
-     * CheckRegistrationMailAction constructor.
-     */
     public function __construct(UserManagerInterface $userManager, Environment $twig, RouterInterface $router)
     {
         $this->userManager = $userManager;

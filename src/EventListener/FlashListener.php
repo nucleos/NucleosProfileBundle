@@ -23,20 +23,14 @@ final class FlashListener implements EventSubscriberInterface
     /**
      * @var string[]
      */
-    private static $successMessages = [
+    private static array $successMessages = [
         NucleosProfileEvents::PROFILE_EDIT_COMPLETED => 'profile.flash.updated',
         NucleosProfileEvents::REGISTRATION_COMPLETED => 'registration.flash.user_created',
     ];
 
-    /**
-     * @var FlashBagInterface
-     */
-    private $flashBag;
+    private FlashBagInterface $flashBag;
 
-    /**
-     * @var TranslatorInterface
-     */
-    private $translator;
+    private TranslatorInterface $translator;
 
     public function __construct(FlashBagInterface $flashBag, TranslatorInterface $translator)
     {

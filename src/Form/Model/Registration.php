@@ -16,20 +16,11 @@ use Nucleos\UserBundle\Model\UserManagerInterface;
 
 class Registration
 {
-    /**
-     * @var string|null
-     */
-    protected $username;
+    protected ?string $username = null;
 
-    /**
-     * @var string|null
-     */
-    protected $email;
+    protected ?string $email = null;
 
-    /**
-     * @var string|null
-     */
-    protected $plainPassword;
+    protected ?string $plainPassword = null;
 
     public function getUsername(): ?string
     {

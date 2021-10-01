@@ -23,20 +23,11 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 final class ConfirmRegistrationAction
 {
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private EventDispatcherInterface $eventDispatcher;
 
-    /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
+    private UserManagerInterface $userManager;
 
-    /**
-     * @var RouterInterface
-     */
-    private $router;
+    private RouterInterface $router;
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,

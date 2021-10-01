@@ -18,20 +18,11 @@ use Symfony\Contracts\EventDispatcher\Event;
 
 class GetResponseRegistrationEvent extends Event
 {
-    /**
-     * @var Request|null
-     */
-    protected $request;
+    protected ?Request $request;
 
-    /**
-     * @var Registration
-     */
-    protected $registration;
+    protected Registration $registration;
 
-    /**
-     * @var Response|null
-     */
-    private $response;
+    private ?Response $response = null;
 
     public function __construct(Registration $user, Request $request = null)
     {
@@ -39,7 +30,7 @@ class GetResponseRegistrationEvent extends Event
         $this->request      = $request;
     }
 
-    public function setResponse(Response $response): void
+    public function setResponse(?Response $response): void
     {
         $this->response = $response;
     }
