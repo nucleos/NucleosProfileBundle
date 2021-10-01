@@ -20,6 +20,7 @@ use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Event\GetResponseUserEvent;
 use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\Model\UserManagerInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -102,9 +103,14 @@ final class EditProfileAction
 
         $formModel = $this->createFormModel($user);
 
-        $form      = $this->formFactory->create(ProfileFormType::class, $formModel, [
-            'validation_groups' => ['Profile', 'Default'],
-        ]);
+        $form      = $this->formFactory
+            ->create(ProfileFormType::class, $formModel, [
+                'validation_groups' => ['Profile', 'Default'],
+            ])
+            ->add('save', SubmitType::class, [
+                'label'  => 'profile.edit.submit',
+            ])
+        ;
 
         $form->handleRequest($request);
 

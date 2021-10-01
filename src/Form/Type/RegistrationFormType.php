@@ -18,7 +18,6 @@ use Symfony\Component\Form\Event\PostSubmitEvent;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Validator\ViolationMapper\ViolationMapper;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -84,9 +83,6 @@ final class RegistrationFormType extends AbstractType
                 'first_options'   => ['label' => 'form.password'],
                 'second_options'  => ['label' => 'form.password_confirmation'],
                 'invalid_message' => 'nucleos_user.password.mismatch',
-            ])
-            ->add('save', SubmitType::class, [
-                'label'  => 'registration.submit',
             ])
             ->addEventListener(FormEvents::POST_SUBMIT, function (PostSubmitEvent $event) use ($options): void {
                 $errors = $this->getUserErrors($event->getData(), (array) $options['validation_groups']);
