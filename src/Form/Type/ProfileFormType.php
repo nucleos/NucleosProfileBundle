@@ -11,6 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Form\Type;
 
+use Nucleos\ProfileBundle\Form\Model\Profile;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\LocaleType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -21,12 +22,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 final class ProfileFormType extends AbstractType
 {
     /**
-     * @var string
+     * @phpstan-var class-string<Profile>
      */
-    private $class;
+    private string $class;
 
     /**
-     * @param string $class The User class name
+     * @phpstan-param class-string<Profile> $class The User class name
      */
     public function __construct(string $class)
     {

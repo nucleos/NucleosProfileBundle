@@ -32,27 +32,18 @@ use Throwable;
 final class RegistrationFormType extends AbstractType
 {
     /**
-     * @var string
+     * @phpstan-var class-string<Registration>
      */
-    private $class;
+    private string $class;
+
+    private UserManagerInterface $userManager;
+
+    private ValidatorInterface $validator;
+
+    private ViolationMapper $violationMapper;
 
     /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
-
-    /**
-     * @var ValidatorInterface
-     */
-    private $validator;
-
-    /**
-     * @var ViolationMapper
-     */
-    private $violationMapper;
-
-    /**
-     * @param string $class The User class name
+     * @phpstan-param class-string<Registration> $class The User class name
      */
     public function __construct(string $class, UserManagerInterface $userManager, ValidatorInterface $validator)
     {

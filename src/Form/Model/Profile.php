@@ -16,15 +16,9 @@ use Nucleos\UserBundle\Model\UserInterface;
 
 class Profile
 {
-    /**
-     * @var string|null
-     */
-    protected $locale;
+    protected ?string $locale = null;
 
-    /**
-     * @var string|null
-     */
-    protected $timezone;
+    protected ?string $timezone = null;
 
     public static function fromUser(UserInterface $user): self
     {

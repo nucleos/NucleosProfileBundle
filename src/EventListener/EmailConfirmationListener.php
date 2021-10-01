@@ -22,25 +22,13 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 final class EmailConfirmationListener implements EventSubscriberInterface
 {
-    /**
-     * @var MailerInterface
-     */
-    private $mailer;
+    private MailerInterface $mailer;
 
-    /**
-     * @var TokenGeneratorInterface
-     */
-    private $tokenGenerator;
+    private TokenGeneratorInterface $tokenGenerator;
 
-    /**
-     * @var UrlGeneratorInterface
-     */
-    private $router;
+    private UrlGeneratorInterface $router;
 
-    /**
-     * @var SessionInterface
-     */
-    private $session;
+    private SessionInterface $session;
 
     public function __construct(
         MailerInterface $mailer,

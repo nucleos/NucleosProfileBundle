@@ -18,14 +18,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 final class UserFormEvent extends FormEvent
 {
-    /**
-     * @var UserInterface
-     */
-    private $user;
+    private UserInterface $user;
 
     public function __construct(UserInterface $user, FormInterface $form, Request $request)
     {
         parent::__construct($form, $request);
+
         $this->user = $user;
     }
 

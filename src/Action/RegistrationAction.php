@@ -30,36 +30,24 @@ use Twig\Environment;
 
 final class RegistrationAction
 {
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private EventDispatcherInterface $eventDispatcher;
+
+    private FormFactoryInterface $formFactory;
+
+    private UserManagerInterface $userManager;
+
+    private Environment $twig;
+
+    private RouterInterface $router;
 
     /**
-     * @var FormFactoryInterface
+     * @phpstan-var class-string<Registration>
      */
-    private $formFactory;
+    private string $formModel;
 
     /**
-     * @var UserManagerInterface
+     * @phpstan-param class-string<Registration> $formModel
      */
-    private $userManager;
-
-    /**
-     * @var Environment
-     */
-    private $twig;
-
-    /**
-     * @var RouterInterface
-     */
-    private $router;
-
-    /**
-     * @var string
-     */
-    private $formModel;
-
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
         FormFactoryInterface $formFactory,

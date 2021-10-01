@@ -30,15 +30,9 @@ final class AuthenticationListenerTest extends TestCase
      */
     private $eventDispatcher;
 
-    /**
-     * @var FilterUserResponseEvent
-     */
-    private $event;
+    private FilterUserResponseEvent $event;
 
-    /**
-     * @var AuthenticationListener
-     */
-    private $listener;
+    private AuthenticationListener $listener;
 
     protected function setUp(): void
     {
