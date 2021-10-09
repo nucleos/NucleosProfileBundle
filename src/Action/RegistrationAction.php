@@ -13,11 +13,11 @@ namespace Nucleos\ProfileBundle\Action;
 
 use Nucleos\ProfileBundle\Event\GetResponseRegistrationEvent;
 use Nucleos\ProfileBundle\Event\UserFormEvent;
-use Nucleos\ProfileBundle\Form\Model\Registration;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Event\FormEvent;
+use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormFactoryInterface;
@@ -41,43 +41,33 @@ final class RegistrationAction
 
     private RouterInterface $router;
 
-    /**
-     * @phpstan-var class-string<Registration>
-     */
-    private string $formModel;
-
-    /**
-     * @phpstan-param class-string<Registration> $formModel
-     */
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
         FormFactoryInterface $formFactory,
         UserManagerInterface $userManager,
         RouterInterface $router,
-        Environment $twig,
-        string $formModel
+        Environment $twig
     ) {
         $this->eventDispatcher = $eventDispatcher;
         $this->formFactory     = $formFactory;
         $this->userManager     = $userManager;
         $this->router          = $router;
         $this->twig            = $twig;
-        $this->formModel       = $formModel;
     }
 
     public function __invoke(Request $request): Response
     {
-        $formModel = $this->createFormModel();
+        $user = $this->userManager->createUser();
 
-        $event = new GetResponseRegistrationEvent($formModel, $request);
+        $event = new GetResponseRegistrationEvent($user, $request);
         $this->eventDispatcher->dispatch($event, NucleosProfileEvents::REGISTRATION_INITIALIZE);
 
         if (null !== $event->getResponse()) {
             return $event->getResponse();
         }
 
-        $form      = $this->formFactory
-            ->create(RegistrationFormType::class, $formModel, [
+        $form = $this->formFactory
+            ->create(RegistrationFormType::class, $user, [
                 'validation_groups' => ['Registration', 'Default'],
             ])
             ->add('save', SubmitType::class, [
@@ -89,7 +79,7 @@ final class RegistrationAction
 
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
-                return $this->updateUser($request, $formModel, $form);
+                return $this->updateUser($request, $user, $form);
             }
 
             $event = new FormEvent($form, $request);
@@ -105,23 +95,15 @@ final class RegistrationAction
         ]));
     }
 
-    private function createFormModel(): Registration
+    private function updateUser(Request $request, UserInterface $user, FormInterface $form): Response
     {
-        return new $this->formModel();
-    }
-
-    private function updateUser(Request $request, Registration $formModel, FormInterface $form): Response
-    {
-        $user = $formModel->toUser($this->userManager);
-
         $event = new UserFormEvent($user, $form, $request);
         $this->eventDispatcher->dispatch($event, NucleosProfileEvents::REGISTRATION_SUCCESS);
 
         $this->userManager->updateUser($user);
 
         if (null === $response = $event->getResponse()) {
-            $url      = $this->router->generate('nucleos_profile_registration_confirmed');
-            $response = new RedirectResponse($url);
+            $response = new RedirectResponse($this->router->generate('nucleos_profile_registration_confirmed'));
         }
 
         $this->eventDispatcher->dispatch(

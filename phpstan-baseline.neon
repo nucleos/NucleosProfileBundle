@@ -1,7 +1,2 @@
 parameters:
 	ignoreErrors:
-		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
-			count: 1
-			path: src/Form/Model/Profile.php
-

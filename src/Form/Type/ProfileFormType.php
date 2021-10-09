@@ -11,7 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Form\Type;
 
-use Nucleos\ProfileBundle\Form\Model\Profile;
+use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\LocaleType;
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
@@ -20,19 +20,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class ProfileFormType extends AbstractType
 {
-    /**
-     * @phpstan-var class-string<Profile>
-     */
-    private string $class;
-
-    /**
-     * @phpstan-param class-string<Profile> $class The User class name
-     */
-    public function __construct(string $class)
-    {
-        $this->class = $class;
-    }
-
     /**
      * @param array<mixed> $options
      */
@@ -53,7 +40,7 @@ final class ProfileFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'         => $this->class,
+            'data_class'         => UserInterface::class,
             'csrf_token_id'      => 'profile',
             'translation_domain' => 'NucleosProfileBundle',
         ]);

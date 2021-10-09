@@ -11,16 +11,16 @@
 
 namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
-use Nucleos\ProfileBundle\Form\Model\Profile;
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
+use Nucleos\ProfileBundle\Tests\App\Entity\TestUser;
 
 final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
 {
     public function testSubmit(): void
     {
-        $profile = new Profile();
+        $user = new TestUser();
 
-        $form     = $this->factory->create(ProfileFormType::class, $profile);
+        $form     = $this->factory->create(ProfileFormType::class, $user);
         $formData = [
             'timezone'  => 'Europe/Berlin',
             'locale'    => 'de_DE',
@@ -28,9 +28,9 @@ final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
         $form->submit($formData);
 
         static::assertTrue($form->isSynchronized());
-        static::assertSame($profile, $form->getData());
-        static::assertSame('Europe/Berlin', $profile->getTimezone());
-        static::assertSame('de_DE', $profile->getLocale());
+        static::assertSame($user, $form->getData());
+        static::assertSame('Europe/Berlin', $user->getTimezone());
+        static::assertSame('de_DE', $user->getLocale());
     }
 
     /**
@@ -38,11 +38,8 @@ final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
      */
     protected function getTypes(): array
     {
-        return array_merge(
-            parent::getTypes(),
-            [
-                new ProfileFormType(Profile::class),
-            ]
-        );
+        return array_merge(parent::getTypes(), [
+            new ProfileFormType(),
+        ]);
     }
 }

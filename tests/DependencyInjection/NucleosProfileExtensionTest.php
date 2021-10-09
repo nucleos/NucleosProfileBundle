@@ -13,8 +13,6 @@ namespace Nucleos\ProfileBundle\Tests\DependencyInjection;
 
 use Nucleos\ProfileBundle\DependencyInjection\NucleosProfileExtension;
 use Nucleos\ProfileBundle\EventListener\FlashListener;
-use Nucleos\ProfileBundle\Form\Model\Profile;
-use Nucleos\ProfileBundle\Form\Model\Registration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Yaml\Parser;
@@ -51,22 +49,6 @@ final class NucleosProfileExtensionTest extends TestCase
         $this->assertNotHasDefinition(FlashListener::class);
     }
 
-    public function testUserLoadFormModelsWithDefaults(): void
-    {
-        $this->createEmptyConfiguration();
-
-        $this->assertParameter(Profile::class, 'nucleos_profile.profile.form.model');
-        $this->assertParameter(Registration::class, 'nucleos_profile.registration.form.model');
-    }
-
-    public function testUserLoadFormModels(): void
-    {
-        $this->createFullConfiguration();
-
-        $this->assertParameter('App\Form\Profile', 'nucleos_profile.profile.form.model');
-        $this->assertParameter('App\Form\Registration', 'nucleos_profile.registration.form.model');
-    }
-
     private function createEmptyConfiguration(): void
     {
         $this->configuration = new ContainerBuilder();
@@ -92,12 +74,7 @@ final class NucleosProfileExtensionTest extends TestCase
         $yaml   = <<<'EOF'
 use_listener: true
 use_flash_notifications: false
-profile:
-    form:
-         model: App\Form\Profile
 registration:
-    form:
-         model: App\Form\Registration
     confirmation:
         from_email: register@acme.org
         enabled: true
@@ -112,14 +89,6 @@ EOF;
     private function assertAlias(string $value, string $key): void
     {
         static::assertSame($value, (string) $this->configuration->getAlias($key), sprintf('%s alias is correct', $key));
-    }
-
-    /**
-     * @param mixed $value
-     */
-    private function assertParameter($value, string $key): void
-    {
-        static::assertSame($value, $this->configuration->getParameter($key), sprintf('%s parameter is correct', $key));
     }
 
     private function assertHasDefinition(string $id): void

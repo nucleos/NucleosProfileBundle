@@ -45,7 +45,7 @@ final class NucleosProfileExtension extends Extension
         }
 
         $this->loadRegistration($config['registration'], $container, $loader);
-        $this->loadProfile($config['profile'], $container, $loader);
+        $this->loadProfile($loader);
 
         $container->setAlias('nucleos_profile.mailer', $config['service']['mailer']);
     }
@@ -61,17 +61,11 @@ final class NucleosProfileExtension extends Extension
             $loader->load('email_confirmation.php');
         }
 
-        $container->setParameter('nucleos_profile.registration.form.model', $config['form']['model']);
         $container->setParameter('nucleos_profile.registration.confirmation.from_email', $config['confirmation']['from_email']);
     }
 
-    /**
-     * @param array<mixed> $config
-     */
-    private function loadProfile(array $config, ContainerBuilder $container, FileLoader $loader): void
+    private function loadProfile(FileLoader $loader): void
     {
         $loader->load('profile.php');
-
-        $container->setParameter('nucleos_profile.profile.form.model', $config['form']['model']);
     }
 }
