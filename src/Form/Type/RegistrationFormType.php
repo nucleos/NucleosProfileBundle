@@ -11,58 +11,70 @@
 
 namespace Nucleos\ProfileBundle\Form\Type;
 
-use Nucleos\ProfileBundle\Form\Model\Registration;
-use Nucleos\UserBundle\Model\UserManagerInterface;
+use Exception;
+use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Event\PostSubmitEvent;
+use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Validator\ViolationMapper\ViolationMapper;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormEvents;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\ConstraintViolation;
-use Symfony\Component\Validator\ConstraintViolationInterface;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Throwable;
 
 final class RegistrationFormType extends AbstractType
 {
     /**
-     * @phpstan-var class-string<Registration>
-     */
-    private string $class;
-
-    private UserManagerInterface $userManager;
-
-    private ValidatorInterface $validator;
-
-    private ViolationMapper $violationMapper;
-
-    /**
-     * @phpstan-param class-string<Registration> $class The User class name
-     */
-    public function __construct(string $class, UserManagerInterface $userManager, ValidatorInterface $validator)
-    {
-        $this->class           = $class;
-        $this->validator       = $validator;
-        $this->userManager     = $userManager;
-        $this->violationMapper = new ViolationMapper();
-    }
-
-    /**
      * @param array<mixed> $options
+     *
+     * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('email', EmailType::class, [
                 'label'              => 'form.email',
+                'getter'             => static function (UserInterface $user, FormInterface $form): string {
+                    try {
+                        return $user->getEmail();
+                    } catch (Exception $exception) {
+                        return '';
+                    }
+                },
+                'setter' => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
+                    if (null === $value) {
+                        return;
+                    }
+
+                    try {
+                        $user->setEmail($value);
+                    } catch (Exception $exception) {
+                        throw new UnexpectedTypeException($value, 'string');
+                    }
+                },
             ])
             ->add('username', TextType::class, [
                 'label'              => 'form.username',
+                'getter'             => static function (UserInterface $user, FormInterface $form): string {
+                    try {
+                        return $user->getUsername();
+                    } catch (Exception $exception) {
+                        return '';
+                    }
+                },
+                'setter' => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
+                    if (null === $value) {
+                        return;
+                    }
+
+                    try {
+                        $user->setUsername($value);
+                    } catch (Exception $exception) {
+                        throw new UnexpectedTypeException($value, 'string');
+                    }
+                },
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type'            => PasswordType::class,
@@ -75,46 +87,16 @@ final class RegistrationFormType extends AbstractType
                 'second_options'  => ['label' => 'form.password_confirmation'],
                 'invalid_message' => 'nucleos_user.password.mismatch',
             ])
-            ->addEventListener(FormEvents::POST_SUBMIT, function (PostSubmitEvent $event) use ($options): void {
-                $errors = $this->getUserErrors($event->getData(), (array) $options['validation_groups']);
-
-                foreach ($errors as $error) {
-                    \assert($error instanceof ConstraintViolation);
-
-                    $this->violationMapper->mapViolation($error, $event->getForm());
-                }
-            })
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'         => $this->class,
+            'data_class'         => UserInterface::class,
             'csrf_token_id'      => 'registration',
             'translation_domain' => 'NucleosProfileBundle',
             'validation_groups'  => [],
         ]);
-    }
-
-    /**
-     * @param mixed    $registration
-     * @param string[] $validationGroups
-     *
-     * @return ConstraintViolationInterface[]
-     */
-    private function getUserErrors($registration, array $validationGroups): array
-    {
-        if (!$registration instanceof Registration) {
-            return [];
-        }
-
-        try {
-            $user = $registration->toUser($this->userManager);
-        } catch (Throwable $exception) {
-            return [];
-        }
-
-        return iterator_to_array($this->validator->validate($user, null, $validationGroups));
     }
 }

@@ -11,54 +11,16 @@
 
 namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
-use Nucleos\ProfileBundle\Form\Model\Registration;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
-use Nucleos\UserBundle\Model\UserInterface;
-use Nucleos\UserBundle\Model\UserManagerInterface;
-use PHPUnit\Framework\MockObject\MockObject;
-use Symfony\Component\Form\Extension\Validator\ViolationMapper\ViolationMapper;
-use Symfony\Component\Validator\ConstraintViolationList;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Nucleos\ProfileBundle\Tests\App\Entity\TestUser;
 
 final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
 {
-    /**
-     * @var MockObject&UserManagerInterface
-     */
-    private $userManager;
-
-    /**
-     * @var MockObject&ValidatorInterface
-     */
-    private $validator;
-
-    /**
-     * @var MockObject&ViolationMapper
-     */
-    private $violationMapper;
-
-    protected function setUp(): void
-    {
-        $this->userManager     = $this->createMock(UserManagerInterface::class);
-        $this->validator       = $this->createMock(ValidatorInterface::class);
-        $this->violationMapper = $this->createMock(ViolationMapper::class);
-
-        parent::setUp();
-    }
-
     public function testSubmit(): void
     {
-        $registration = new Registration();
+        $user = new TestUser();
 
-        $user = $this->createMock(UserInterface::class);
-
-        $this->userManager->method('createUser')->willReturn($user);
-
-        $this->validator->method('validate')->with($user, null, [])
-            ->willReturn(new ConstraintViolationList())
-        ;
-
-        $form     = $this->factory->create(RegistrationFormType::class, $registration);
+        $form     = $this->factory->create(RegistrationFormType::class, $user);
         $formData = [
             'username'      => 'bar',
             'email'         => 'john@doe.com',
@@ -70,10 +32,10 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         $form->submit($formData);
 
         static::assertTrue($form->isSynchronized());
-        static::assertSame($registration, $form->getData());
-        static::assertSame('bar', $registration->getUsername());
-        static::assertSame('john@doe.com', $registration->getEmail());
-        static::assertSame('test', $registration->getPlainPassword());
+        static::assertSame($user, $form->getData());
+        static::assertSame('bar', $user->getUsername());
+        static::assertSame('john@doe.com', $user->getEmail());
+        static::assertSame('test', $user->getPlainPassword());
     }
 
     /**
@@ -81,15 +43,8 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
      */
     protected function getTypes(): array
     {
-        return array_merge(
-            parent::getTypes(),
-            [
-                new RegistrationFormType(
-                    Registration::class,
-                    $this->userManager,
-                    $this->validator
-                ),
-            ]
-        );
+        return array_merge(parent::getTypes(), [
+            new RegistrationFormType(),
+        ]);
     }
 }

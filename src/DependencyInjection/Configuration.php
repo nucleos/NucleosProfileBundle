@@ -11,8 +11,6 @@
 
 namespace Nucleos\ProfileBundle\DependencyInjection;
 
-use Nucleos\ProfileBundle\Form\Model\Profile;
-use Nucleos\ProfileBundle\Form\Model\Registration;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -40,7 +38,6 @@ class Configuration implements ConfigurationInterface
         ;
 
         $this->addRegistrationSection($rootNode);
-        $this->addProfileSection($rootNode);
         $this->addServiceSection($rootNode);
 
         return $treeBuilder;
@@ -53,36 +50,11 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('registration')
                     ->addDefaultsIfNotSet()
                     ->children()
-                        ->arrayNode('form')
-                            ->addDefaultsIfNotSet()
-                            ->children()
-                                ->scalarNode('model')->defaultValue(Registration::class)->cannotBeEmpty()->end()
-                            ->end()
-                        ->end()
                         ->arrayNode('confirmation')
                             ->addDefaultsIfNotSet()
                             ->children()
                                 ->booleanNode('enabled')->defaultFalse()->end()
                                 ->scalarNode('from_email')->defaultNull()->end()
-                            ->end()
-                        ->end()
-                    ->end()
-                ->end()
-            ->end()
-        ;
-    }
-
-    private function addProfileSection(ArrayNodeDefinition $node): void
-    {
-        $node
-            ->children()
-                ->arrayNode('profile')
-                    ->addDefaultsIfNotSet()
-                    ->children()
-                        ->arrayNode('form')
-                            ->addDefaultsIfNotSet()
-                            ->children()
-                                ->scalarNode('model')->defaultValue(Profile::class)->cannotBeEmpty()->end()
                             ->end()
                         ->end()
                     ->end()

@@ -9,6 +9,6 @@
         "text": "build/infection/infection-log.txt"
     },
     "ignoreMsiWithNoMutations": true,
-    "minMsi": 15,
-    "minCoveredMsi": 40
+    "minMsi": 10,
+    "minCoveredMsi": 35
 }

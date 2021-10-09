@@ -1,11 +1,6 @@
 Customize Registration
 ======================
 
-.. note::
-
-    Work in progress!
-
-
 Your business needs might require changes in registration form. It is possible to add, remove or modify form fields provided by NucleosProfileBundle.
 
 How to customize a Form
@@ -13,48 +8,30 @@ How to customize a Form
 
 If you want to modify the Registration form in your project there are a few steps that you should take. For example if you would like to add checkbox for accepting terms and conditions you will have to follow these steps:
 
-1. Extend ``Nucleos\ProfileBundle\Form\Model\Registration``
+1. Extend ``Nucleos\UserBundle\Model\User\User``
 
 .. code-block:: php-annotations
 
-    namespace App\Form\Model;
+    namespace App\Model;
 
-    use Nucleos\ProfileBundle\Form\Model\Registration as BaseRegistration;
+    use Nucleos\UserBundle\Model\User as BaseUser;
 
-    class Registration extends BaseRegistration
+    class User extends BaseUser
     {
-        /**
-         * @var bool|null
-         */
-        protected $termsAccepted;
+        protected ?bool $termsAccepted = false;
 
-        /**
-         * @return bool|null
-         */
         public function gettermsAccepted(): ?bool
         {
             return $this->termsAccepted;
         }
 
-        /**
-         * @param Boolean|null $termsAccepted
-         */
         public function setTermsAccepted(?bool $termsAccepted): void
         {
             $this->termsAccepted = $termsAccepted;
         }
     }
 
-2. Add custom form model to configuration
-
-.. code-block:: yaml
-
-    nucleos_profile:
-        registration:
-            form:
-                model: App\Form\Model\Registration
-
-3. Use Symfony Form Extensions to add fields. You can use builder to remove or modify fields as well.
+2. Use Symfony Form Extensions to add fields. You can use builder to remove or modify fields as well.
 
 .. code-block:: php-annotations
 
@@ -68,7 +45,6 @@ If you want to modify the Registration form in your project there are a few step
     {
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
-            // Adding new fields works just like in the parent form type.
             $builder->add('termsAccepted', CheckboxType::class);
         }
 

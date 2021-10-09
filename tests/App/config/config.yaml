@@ -33,10 +33,10 @@ nucleos_user:
 
     from_email:  'no-reply@localhost'
 
-    user_class:  'Nucleos\ProfileBundle\Tests\App\Entity\User'
+    user_class:  'Nucleos\ProfileBundle\Tests\App\Entity\TestUser'
 
     group:
-        group_class: 'Nucleos\ProfileBundle\Tests\App\Entity\Group'
+        group_class: 'Nucleos\ProfileBundle\Tests\App\Entity\TestGroup'
 
 
 nucleos_profile:

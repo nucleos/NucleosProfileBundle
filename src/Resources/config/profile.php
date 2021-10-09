@@ -14,7 +14,6 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 use Nucleos\ProfileBundle\Action\EditProfileAction;
 use Nucleos\ProfileBundle\Action\ShowProfileAction;
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
-use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
 return static function (ContainerConfigurator $container): void {
@@ -22,9 +21,6 @@ return static function (ContainerConfigurator $container): void {
 
         ->set(ProfileFormType::class)
             ->tag('form.type')
-            ->args([
-                new Parameter('nucleos_profile.profile.form.model'),
-            ])
 
         ->set(EditProfileAction::class)
             ->public()
@@ -35,7 +31,6 @@ return static function (ContainerConfigurator $container): void {
                 new Reference('twig'),
                 new Reference('router'),
                 new Reference('security.helper'),
-                new Parameter('nucleos_profile.profile.form.model'),
             ])
 
         ->set(ShowProfileAction::class)

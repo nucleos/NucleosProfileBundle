@@ -11,7 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Event;
 
-use Nucleos\ProfileBundle\Form\Model\Registration;
+use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\EventDispatcher\Event;
@@ -20,14 +20,14 @@ class GetResponseRegistrationEvent extends Event
 {
     protected ?Request $request;
 
-    protected Registration $registration;
+    protected UserInterface $user;
 
     private ?Response $response = null;
 
-    public function __construct(Registration $user, Request $request = null)
+    public function __construct(UserInterface $user, Request $request = null)
     {
-        $this->registration = $user;
-        $this->request      = $request;
+        $this->user    = $user;
+        $this->request = $request;
     }
 
     public function setResponse(?Response $response): void
@@ -40,9 +40,9 @@ class GetResponseRegistrationEvent extends Event
         return $this->response;
     }
 
-    public function getRegistration(): Registration
+    public function getUser(): UserInterface
     {
-        return $this->registration;
+        return $this->user;
     }
 
     public function getRequest(): ?Request

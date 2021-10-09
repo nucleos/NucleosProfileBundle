@@ -11,9 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Action;
 
-use LogicException;
 use Nucleos\ProfileBundle\Event\UserFormEvent;
-use Nucleos\ProfileBundle\Form\Model\Profile;
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
@@ -22,6 +20,7 @@ use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -45,22 +44,13 @@ final class EditProfileAction
 
     private Security $security;
 
-    /**
-     * @phpstan-var class-string<Profile>
-     */
-    private string $formModel;
-
-    /**
-     * @phpstan-param class-string<Profile> $formModel
-     */
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
         FormFactoryInterface $formFactory,
         UserManagerInterface $userManager,
         Environment $twig,
         RouterInterface $router,
-        Security $security,
-        string $formModel
+        Security $security
     ) {
         $this->eventDispatcher = $eventDispatcher;
         $this->formFactory     = $formFactory;
@@ -68,7 +58,6 @@ final class EditProfileAction
         $this->twig            = $twig;
         $this->router          = $router;
         $this->security        = $security;
-        $this->formModel       = $formModel;
     }
 
     public function __invoke(Request $request): Response
@@ -86,10 +75,8 @@ final class EditProfileAction
             return $event->getResponse();
         }
 
-        $formModel = $this->createFormModel($user);
-
-        $form      = $this->formFactory
-            ->create(ProfileFormType::class, $formModel, [
+        $form = $this->formFactory
+            ->create(ProfileFormType::class, $user, [
                 'validation_groups' => ['Profile', 'Default'],
             ])
             ->add('save', SubmitType::class, [
@@ -100,39 +87,30 @@ final class EditProfileAction
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $formModel->updateUser($user);
-
-            $event = new UserFormEvent($user, $form, $request);
-            $this->eventDispatcher->dispatch($event, NucleosProfileEvents::PROFILE_EDIT_SUCCESS);
-
-            $this->userManager->updateUser($user);
-
-            if (null === $response = $event->getResponse()) {
-                $url      = $this->router->generate('nucleos_profile_profile_show');
-                $response = new RedirectResponse($url);
-            }
-
-            $this->eventDispatcher->dispatch(
-                new FilterUserResponseEvent($user, $request, $response),
-                NucleosProfileEvents::PROFILE_EDIT_COMPLETED
-            );
-
-            return $response;
+            return $this->updateUser($request, $form, $user);
         }
 
-        return new Response(
-            $this->twig->render('@NucleosProfile/Profile/edit.html.twig', [
-                'form' => $form->createView(),
-            ])
-        );
+        return new Response($this->twig->render('@NucleosProfile/Profile/edit.html.twig', [
+            'form' => $form->createView(),
+        ]));
     }
 
-    private function createFormModel(UserInterface $user): Profile
+    private function updateUser(Request $request, FormInterface $form, UserInterface $user): Response
     {
-        if (!is_a($this->formModel, Profile::class, true)) {
-            throw new LogicException(sprintf('The "%s" is not a valid "%s" class', $this->formModel, Profile::class));
+        $event = new UserFormEvent($user, $form, $request);
+        $this->eventDispatcher->dispatch($event, NucleosProfileEvents::PROFILE_EDIT_SUCCESS);
+
+        $this->userManager->updateUser($user);
+
+        if (null === $response = $event->getResponse()) {
+            $response = new RedirectResponse($this->router->generate('nucleos_profile_profile_show'));
         }
 
-        return ($this->formModel)::fromUser($user);
+        $this->eventDispatcher->dispatch(
+            new FilterUserResponseEvent($user, $request, $response),
+            NucleosProfileEvents::PROFILE_EDIT_COMPLETED
+        );
+
+        return $response;
     }
 }
