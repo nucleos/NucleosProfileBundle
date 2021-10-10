@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="profile.show.username">
+        <source>profile.show.username</source>
+        <target>Benutzername</target>
+      </trans-unit>
+      <trans-unit id="profile.show.email">
+        <source>profile.show.email</source>
+        <target>E-Mail</target>
+      </trans-unit>
+      <trans-unit id="profile.edit.submit">
+        <source>profile.edit.submit</source>
+        <target>Benutzer aktualisieren</target>
+      </trans-unit>
+      <trans-unit id="profile.flash.updated">
+        <source>profile.flash.updated</source>
+        <target>Das Benutzerprofil wurde aktualisiert.</target>
+      </trans-unit>
+      <trans-unit id="registration.check_email">
+        <source>registration.check_email</source>
+        <target>Eine E-Mail wurde an %email% gesendet. Sie enthält einen Link, den Sie anklicken müssen, um Ihr Benutzerkonto zu bestätigen.</target>
+      </trans-unit>
+      <trans-unit id="registration.confirmed">
+        <source>registration.confirmed</source>
+        <target>Glückwunsch %username%, Ihr Benutzerkonto ist jetzt bestätigt.</target>
+      </trans-unit>
+      <trans-unit id="registration.back">
+        <source>registration.back</source>
+        <target>Zurück zur ursprünglichen Seite.</target>
+      </trans-unit>
+      <trans-unit id="registration.submit">
+        <source>registration.submit</source>
+        <target>Registrieren</target>
+      </trans-unit>
+      <trans-unit id="registration.flash.user_created">
+        <source>registration.flash.user_created</source>
+        <target>Der Benutzer wurde erfolgreich erstellt.</target>
+      </trans-unit>
+      <trans-unit id="registration.email.subject">
+        <source>registration.email.subject</source>
+        <target>Willkommen %username%!</target>
+      </trans-unit>
+      <trans-unit id="registration.email.message">
+        <source>registration.email.message</source>
+        <target><![CDATA[Hallo %username%!
+
+Besuchen Sie bitte folgende Seite, um Ihr Benutzerkonto zu bestätigen: %confirmationUrl%
+
+Mit besten Grüßen,
+das Team.]]></target>
+      </trans-unit>
+      <trans-unit id="registration.email.html">
+        <source>registration.email.html</source>
+        <target><![CDATA[
+          <p>Hallo %username%!</p>
+          <p>Besuchen Sie bitte folgende Seite, um Ihr Benutzerkonto zu bestätigen: <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+          <p>Mit besten Grüßen,</p>
+          <p>das Team.</p>
+        ]]></target>
+      </trans-unit>
+      <trans-unit id="form.group_name">
+        <source>form.group_name</source>
+        <target>Gruppenname</target>
+      </trans-unit>
+      <trans-unit id="form.username">
+        <source>form.username</source>
+        <target>Benutzername</target>
+      </trans-unit>
+      <trans-unit id="form.email">
+        <source>form.email</source>
+        <target>E-Mail-Adresse</target>
+      </trans-unit>
+      <trans-unit id="form.current_password">
+        <source>form.current_password</source>
+        <target>Derzeitiges Passwort</target>
+      </trans-unit>
+      <trans-unit id="form.password">
+        <source>form.password</source>
+        <target>Passwort</target>
+      </trans-unit>
+      <trans-unit id="form.password_confirmation">
+        <source>form.password_confirmation</source>
+        <target>Passwort bestätigen</target>
+      </trans-unit>
+      <trans-unit id="form.new_password">
+        <source>form.new_password</source>
+        <target>Neues Passwort</target>
+      </trans-unit>
+      <trans-unit id="form.new_password_confirmation">
+        <source>form.new_password_confirmation</source>
+        <target>Neues Passwort bestätigen</target>
+      </trans-unit>
+      <trans-unit id="form.timezone">
+        <source>form.timezone</source>
+        <target>Zeitzone</target>
+      </trans-unit>
+      <trans-unit id="form.locale">
+        <source>form.locale</source>
+        <target>Sprache</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

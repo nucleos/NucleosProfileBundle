@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="profile.show.username">
+        <source>profile.show.username</source>
+        <target>Nombre de usuario</target>
+      </trans-unit>
+      <trans-unit id="profile.show.email">
+        <source>profile.show.email</source>
+        <target>Correo electrónico</target>
+      </trans-unit>
+      <trans-unit id="profile.edit.submit">
+        <source>profile.edit.submit</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="profile.flash.updated">
+        <source>profile.flash.updated</source>
+        <target>El perfil ha sido actualizado.</target>
+      </trans-unit>
+      <trans-unit id="registration.check_email">
+        <source>registration.check_email</source>
+        <target>Se ha enviado un correo electrónico a %email%. Contiene un enlace de activación al que debes acceder para activar tu cuenta.
+</target>
+      </trans-unit>
+      <trans-unit id="registration.confirmed">
+        <source>registration.confirmed</source>
+        <target>Felicidades %username%, tu cuenta está ahora confirmada.</target>
+      </trans-unit>
+      <trans-unit id="registration.back">
+        <source>registration.back</source>
+        <target>Volver a la página original.</target>
+      </trans-unit>
+      <trans-unit id="registration.submit">
+        <source>registration.submit</source>
+        <target>Darse de alta</target>
+      </trans-unit>
+      <trans-unit id="registration.flash.user_created">
+        <source>registration.flash.user_created</source>
+        <target>El usuario ha sido creado con éxito.</target>
+      </trans-unit>
+      <trans-unit id="registration.email.subject">
+        <source>registration.email.subject</source>
+        <target>¡Bienvenido %username%!</target>
+      </trans-unit>
+      <trans-unit id="registration.email.message">
+        <source>registration.email.message</source>
+        <target><![CDATA[¡Hola %username%!
+
+Para completar la validación de tu cuenta, por favor visita %confirmationUrl%
+
+Este enlace sólo puede utilizarse una vez para validar tu cuenta.
+
+Atentamente,
+el equipo.]]></target>
+      </trans-unit>
+      <trans-unit id="registration.email.html">
+        <source>registration.email.html</source>
+        <target><![CDATA[
+          <p>¡Hola %username%!</p>
+          <p>Para completar la validación de tu cuenta, por favor visita <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+          <p>Este enlace sólo puede utilizarse una vez para validar tu cuenta.</p>
+          <p>Atentamente,</p>
+          <p>el equipo.</p>
+        ]]></target>
+      </trans-unit>
+      <trans-unit id="form.group_name">
+        <source>form.group_name</source>
+        <target>Nombre de grupo</target>
+      </trans-unit>
+      <trans-unit id="form.username">
+        <source>form.username</source>
+        <target>Nombre de usuario</target>
+      </trans-unit>
+      <trans-unit id="form.email">
+        <source>form.email</source>
+        <target>Correo electrónico</target>
+      </trans-unit>
+      <trans-unit id="form.current_password">
+        <source>form.current_password</source>
+        <target>Contraseña actual</target>
+      </trans-unit>
+      <trans-unit id="form.password">
+        <source>form.password</source>
+        <target>Contraseña</target>
+      </trans-unit>
+      <trans-unit id="form.password_confirmation">
+        <source>form.password_confirmation</source>
+        <target>Repita la contraseña</target>
+      </trans-unit>
+      <trans-unit id="form.new_password">
+        <source>form.new_password</source>
+        <target>Nueva contraseña</target>
+      </trans-unit>
+      <trans-unit id="form.new_password_confirmation">
+        <source>form.new_password_confirmation</source>
+        <target>Repita la contraseña</target>
+      </trans-unit>
+      <trans-unit id="form.timezone">
+        <source>form.timezone</source>
+        <target>Zona horaria</target>
+      </trans-unit>
+      <trans-unit id="form.locale">
+        <source>form.locale</source>
+        <target>Idioma</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

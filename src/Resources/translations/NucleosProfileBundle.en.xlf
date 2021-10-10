@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="profile.show.username">
+        <source>profile.show.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="profile.show.email">
+        <source>profile.show.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="profile.edit.submit">
+        <source>profile.edit.submit</source>
+        <target>Update</target>
+      </trans-unit>
+      <trans-unit id="profile.flash.updated">
+        <source>profile.flash.updated</source>
+        <target>The profile has been updated.</target>
+      </trans-unit>
+      <trans-unit id="registration.check_email">
+        <source>registration.check_email</source>
+        <target>An email has been sent to %email%. It contains an activation link you must click to activate your account.
+</target>
+      </trans-unit>
+      <trans-unit id="registration.confirmed">
+        <source>registration.confirmed</source>
+        <target>Congrats %username%, your account is now activated.</target>
+      </trans-unit>
+      <trans-unit id="registration.back">
+        <source>registration.back</source>
+        <target>Back to the originating page.</target>
+      </trans-unit>
+      <trans-unit id="registration.submit">
+        <source>registration.submit</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="registration.flash.user_created">
+        <source>registration.flash.user_created</source>
+        <target>The user has been created successfully.</target>
+      </trans-unit>
+      <trans-unit id="registration.email.subject">
+        <source>registration.email.subject</source>
+        <target>Welcome %username%!</target>
+      </trans-unit>
+      <trans-unit id="registration.email.message">
+        <source>registration.email.message</source>
+        <target><![CDATA[Hello %username%!
+
+To finish activating your account - please visit %confirmationUrl%
+
+This link can only be used once to validate your account.
+
+Regards,
+the Team.]]></target>
+      </trans-unit>
+      <trans-unit id="registration.email.html">
+        <source>registration.email.html</source>
+        <target><![CDATA[
+          <p>Hello %username%!</p>
+          <p>To finish activating your account - please visit <a href="%confirmationUrl%">%confirmationUrl%</a></p>
+          <p>This link can only be used once to validate your account.</p>
+          <p>Regards,</p>
+          <p>the Team.</p>
+        ]]></target>
+      </trans-unit>
+      <trans-unit id="form.group_name">
+        <source>form.group_name</source>
+        <target>Group name</target>
+      </trans-unit>
+      <trans-unit id="form.username">
+        <source>form.username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="form.email">
+        <source>form.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="form.current_password">
+        <source>form.current_password</source>
+        <target>Current password</target>
+      </trans-unit>
+      <trans-unit id="form.password">
+        <source>form.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="form.password_confirmation">
+        <source>form.password_confirmation</source>
+        <target>Repeat password</target>
+      </trans-unit>
+      <trans-unit id="form.new_password">
+        <source>form.new_password</source>
+        <target>New password</target>
+      </trans-unit>
+      <trans-unit id="form.new_password_confirmation">
+        <source>form.new_password_confirmation</source>
+        <target>Repeat new password</target>
+      </trans-unit>
+      <trans-unit id="form.timezone">
+        <source>form.timezone</source>
+        <target>Timezone</target>
+      </trans-unit>
+      <trans-unit id="form.locale">
+        <source>form.locale</source>
+        <target>Locale</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
