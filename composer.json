@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.0",
         "doctrine/persistence": "^2.2.2",
         "nucleos/user-bundle": "^1.7",
         "symfony/config": "^5.3",
