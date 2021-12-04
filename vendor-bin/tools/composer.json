@@ -21,6 +21,7 @@
         "vimeo/psalm": "^4.3.1"
     },
     "config": {
+        "bin-dir": "../../vendor/bin",
         "platform": {
             "php": "8.0.2"
         }
