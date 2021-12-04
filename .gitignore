@@ -7,3 +7,4 @@ phpunit.xml
 /vendor/
 !/vendor-bin/tools/composer.lock
 /vendor-bin/tools/vendor/
+/vendor-bin/tools/bin/
