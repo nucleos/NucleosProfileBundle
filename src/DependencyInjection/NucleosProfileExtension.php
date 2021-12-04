@@ -57,7 +57,7 @@ final class NucleosProfileExtension extends Extension
     {
         $loader->load('registration.php');
 
-        if ($config['confirmation']['enabled']) {
+        if (true === $config['confirmation']['enabled']) {
             $loader->load('email_confirmation.php');
         }
 
