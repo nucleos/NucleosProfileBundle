@@ -18,15 +18,9 @@ use Symfony\Component\Mime\Part\AbstractPart;
 
 final class RegistrationMail extends TemplatedEmail
 {
-    /**
-     * @var string
-     */
-    private $confirmationUrl;
+    private string $confirmationUrl;
 
-    /**
-     * @var UserInterface
-     */
-    private $user;
+    private UserInterface $user;
 
     public function __construct(Headers $headers = null, AbstractPart $body = null)
     {

@@ -31,25 +31,13 @@ use Throwable;
 
 final class RegistrationFormType extends AbstractType
 {
-    /**
-     * @var string
-     */
-    private $class;
+    private string $class;
 
-    /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
+    private UserManagerInterface $userManager;
 
-    /**
-     * @var ValidatorInterface
-     */
-    private $validator;
+    private ValidatorInterface $validator;
 
-    /**
-     * @var ViolationMapper
-     */
-    private $violationMapper;
+    private ViolationMapper $violationMapper;
 
     /**
      * @param string $class The User class name

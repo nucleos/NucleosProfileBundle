@@ -22,15 +22,9 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 final class AuthenticationListener implements EventSubscriberInterface
 {
-    /**
-     * @var LoginManagerInterface
-     */
-    private $loginManager;
+    private LoginManagerInterface $loginManager;
 
-    /**
-     * @var string
-     */
-    private $firewallName;
+    private string $firewallName;
 
     public function __construct(LoginManagerInterface $loginManager, string $firewallName)
     {

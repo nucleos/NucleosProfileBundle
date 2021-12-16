@@ -28,10 +28,7 @@ class GetResponseRegistrationEvent extends Event
      */
     protected $registration;
 
-    /**
-     * @var Response|null
-     */
-    private $response;
+    private ?Response $response = null;
 
     public function __construct(Registration $user, Request $request = null)
     {

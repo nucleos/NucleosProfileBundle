@@ -32,40 +32,19 @@ use Twig\Environment;
 
 final class EditProfileAction
 {
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private EventDispatcherInterface $eventDispatcher;
 
-    /**
-     * @var FormFactoryInterface
-     */
-    private $formFactory;
+    private FormFactoryInterface $formFactory;
 
-    /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
+    private UserManagerInterface $userManager;
 
-    /**
-     * @var Environment
-     */
-    private $twig;
+    private Environment $twig;
 
-    /**
-     * @var RouterInterface
-     */
-    private $router;
+    private RouterInterface $router;
 
-    /**
-     * @var Security
-     */
-    private $security;
+    private Security $security;
 
-    /**
-     * @var string
-     */
-    private $formModel;
+    private string $formModel;
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
