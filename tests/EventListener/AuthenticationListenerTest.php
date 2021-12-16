@@ -25,10 +25,7 @@ final class AuthenticationListenerTest extends TestCase
 {
     public const FIREWALL_NAME = 'foo';
 
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private EventDispatcherInterface $eventDispatcher;
 
     private FilterUserResponseEvent $event;
 
