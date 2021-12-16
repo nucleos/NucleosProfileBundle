@@ -25,15 +25,9 @@ use Symfony\Component\Security\Core\Security;
 
 final class AlreadyLoggedinListener implements EventSubscriberInterface
 {
-    /**
-     * @var Security
-     */
-    private $security;
+    private Security $security;
 
-    /**
-     * @var RouterInterface
-     */
-    private $router;
+    private RouterInterface $router;
 
     /**
      * AlreadyLoggedinListener constructor.

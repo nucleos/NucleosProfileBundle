@@ -22,20 +22,11 @@ use Twig\Environment;
 
 final class RegistrationConfirmedAction
 {
-    /**
-     * @var Environment
-     */
-    private $twig;
+    private Environment $twig;
 
-    /**
-     * @var Security
-     */
-    private $security;
+    private Security $security;
 
-    /**
-     * @var TokenStorageInterface
-     */
-    private $tokenStorage;
+    private TokenStorageInterface $tokenStorage;
 
     public function __construct(Environment $twig, Security $security, TokenStorageInterface $tokenStorage)
     {

@@ -30,35 +30,17 @@ use Twig\Environment;
 
 final class RegistrationAction
 {
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private EventDispatcherInterface $eventDispatcher;
 
-    /**
-     * @var FormFactoryInterface
-     */
-    private $formFactory;
+    private FormFactoryInterface $formFactory;
 
-    /**
-     * @var UserManagerInterface
-     */
-    private $userManager;
+    private UserManagerInterface $userManager;
 
-    /**
-     * @var Environment
-     */
-    private $twig;
+    private Environment $twig;
 
-    /**
-     * @var RouterInterface
-     */
-    private $router;
+    private RouterInterface $router;
 
-    /**
-     * @var string
-     */
-    private $formModel;
+    private string $formModel;
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,

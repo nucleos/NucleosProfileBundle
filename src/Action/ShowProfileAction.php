@@ -19,15 +19,9 @@ use Twig\Environment;
 
 final class ShowProfileAction
 {
-    /**
-     * @var Environment
-     */
-    private $twig;
+    private Environment $twig;
 
-    /**
-     * @var Security
-     */
-    private $security;
+    private Security $security;
 
     public function __construct(Environment $twig, Security $security)
     {

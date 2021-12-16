@@ -21,10 +21,7 @@ use Symfony\Component\Yaml\Parser;
 
 final class NucleosProfileExtensionTest extends TestCase
 {
-    /**
-     * @var ContainerBuilder
-     */
-    protected $configuration;
+    protected ContainerBuilder $configuration;
 
     public function testUserLoadUtilServiceWithDefaults(): void
     {

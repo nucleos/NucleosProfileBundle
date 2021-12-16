@@ -20,10 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class ProfileFormType extends AbstractType
 {
-    /**
-     * @var string
-     */
-    private $class;
+    private string $class;
 
     /**
      * @param string $class The User class name
