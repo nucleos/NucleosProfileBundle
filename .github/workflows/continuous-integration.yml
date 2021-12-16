@@ -44,7 +44,7 @@ jobs:
             php${{ matrix.php-version }}-composer-
 
       - name: "Install locked dependencies with composer"
-        run: composer install --no-interaction --no-progress --no-suggest
+        run: composer install --no-interaction --no-progress
 
       - name: "Run localheinz/composer-normalize"
         run: composer normalize --dry-run
@@ -93,7 +93,7 @@ jobs:
             ${{ matrix.php-version }}-composer-
 
       - name: "Install locked dependencies with composer"
-        run: composer install --no-interaction --no-progress --no-suggest
+        run: composer install --no-interaction --no-progress
 
       - name: "Run phpstan/phpstan"
         run: composer phpstan
@@ -136,7 +136,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: 'Install Symfony Flex'
-        run: composer global require --prefer-dist --no-progress --no-suggest --ansi symfony/flex
+        run: composer global require --prefer-dist --no-progress --ansi symfony/flex
 
       - name: "Cache dependencies installed with composer"
         uses: actions/cache@v2.1.6
@@ -151,11 +151,11 @@ jobs:
 
       - name: "Install lowest dependencies with composer"
         if: matrix.dependencies == 'lowest'
-        run: composer update --no-interaction --no-progress --no-suggest --prefer-lowest
+        run: composer update --no-interaction --no-progress --prefer-lowest
 
       - name: "Install highest dependencies with composer"
         if: matrix.dependencies == 'highest'
-        run: composer update --no-interaction --no-progress --no-suggest
+        run: composer update --no-interaction --no-progress
 
       - name: "Run tests with phpunit/phpunit"
         run: composer test
@@ -190,7 +190,7 @@ jobs:
             php${{ matrix.php-version }}-composer-
 
       - name: "Install locked dependencies with composer"
-        run: composer install --no-interaction --no-progress --no-suggest
+        run: composer install --no-interaction --no-progress
 
       - name: "Collect code coverage with pcov and phpunit/phpunit"
         run: composer coverage
@@ -230,7 +230,7 @@ jobs:
             php${{ matrix.php-version }}-composer-
 
       - name: "Install locked dependencies with composer"
-        run: composer install --no-interaction --no-progress --no-suggest
+        run: composer install --no-interaction --no-progress
 
       - name: "Download infection"
         run: wget -O infection https://github.com/infection/infection/releases/download/0.19.0/infection.phar && chmod +x infection
