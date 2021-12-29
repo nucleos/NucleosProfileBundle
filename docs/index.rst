@@ -14,7 +14,6 @@ The following documents are available:
     installation
     events
     mailing
-    routing
     customize_profile
     customize_registration
     configuration
