@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.8.0 - TBD
+## 2.0.0 - TBD
 
 ### Added
 
@@ -23,6 +23,34 @@ All notable changes to this project will be documented in this file, in reverse 
 ### Fixed
 
 - Nothing.
+
+## 1.8.0 - 2021-12-29
+
+
+-----
+
+### Release Notes for [1.8.0](https://github.com/nucleos/NucleosProfileBundle/milestone/12)
+
+Feature release (minor)
+
+### 1.8.0
+
+- Total issues resolved: **1**
+- Total pull requests resolved: **5**
+- Total contributors: **1**
+
+#### Enhancement
+
+ - [437: Add PHP routing files](https://github.com/nucleos/NucleosProfileBundle/pull/437) thanks to @core23
+ - [431: Add type hints](https://github.com/nucleos/NucleosProfileBundle/pull/431) thanks to @core23
+ - [430: Update tools and use make to run them](https://github.com/nucleos/NucleosProfileBundle/pull/430) thanks to @core23
+ - [428: Normalize composer.json](https://github.com/nucleos/NucleosProfileBundle/pull/428) thanks to @core23
+
+ - [432: Migrate routing files to PHP](https://github.com/nucleos/NucleosProfileBundle/issues/432) thanks to @core23
+
+#### dependency
+
+ - [429: Drop PHP 7 support](https://github.com/nucleos/NucleosProfileBundle/pull/429) thanks to @core23
 
 ## 1.7.0 - 2021-09-27
 
