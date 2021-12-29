@@ -13,8 +13,11 @@ namespace Nucleos\ProfileBundle\EventListener;
 
 use InvalidArgumentException;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
+use RuntimeException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Contracts\EventDispatcher\Event;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -28,14 +31,14 @@ final class FlashListener implements EventSubscriberInterface
         NucleosProfileEvents::REGISTRATION_COMPLETED => 'registration.flash.user_created',
     ];
 
-    private FlashBagInterface $flashBag;
+    private RequestStack $requestStack;
 
     private TranslatorInterface $translator;
 
-    public function __construct(FlashBagInterface $flashBag, TranslatorInterface $translator)
+    public function __construct(RequestStack $requestStack, TranslatorInterface $translator)
     {
-        $this->flashBag   = $flashBag;
-        $this->translator = $translator;
+        $this->requestStack = $requestStack;
+        $this->translator   = $translator;
     }
 
     /**
@@ -55,7 +58,7 @@ final class FlashListener implements EventSubscriberInterface
             throw new InvalidArgumentException('This event does not correspond to a known flash message');
         }
 
-        $this->flashBag->add('success', $this->trans(self::$successMessages[$eventName]));
+        $this->getFlashBag()->add('success', $this->trans(self::$successMessages[$eventName]));
     }
 
     /**
@@ -64,5 +67,16 @@ final class FlashListener implements EventSubscriberInterface
     private function trans(string $message, array $params = []): string
     {
         return $this->translator->trans($message, $params, 'NucleosProfileBundle');
+    }
+
+    private function getFlashBag(): FlashBagInterface
+    {
+        $session = $this->requestStack->getSession();
+
+        if (!$session instanceof Session) {
+            throw new RuntimeException('Could not retrieve flashbag from session.');
+        }
+
+        return $session->getFlashBag();
     }
 }

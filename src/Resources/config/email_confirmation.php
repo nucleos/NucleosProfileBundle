@@ -23,7 +23,7 @@ return static function (ContainerConfigurator $container): void {
                 new Reference('nucleos_profile.mailer'),
                 new Reference('nucleos_user.util.token_generator'),
                 new Reference('router'),
-                new Reference('session'),
+                new Reference('request_stack'),
             ])
 
     ;
