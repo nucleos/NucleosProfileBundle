@@ -12,7 +12,7 @@
 namespace Nucleos\ProfileBundle\EventListener;
 
 use Nucleos\ProfileBundle\Event\UserFormEvent;
-use Nucleos\ProfileBundle\Mailer\MailerInterface;
+use Nucleos\ProfileBundle\Mailer\RegistrationMailer;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Util\TokenGenerator;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -22,7 +22,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 final class EmailConfirmationListener implements EventSubscriberInterface
 {
-    private MailerInterface $mailer;
+    private RegistrationMailer $mailer;
 
     private TokenGenerator $tokenGenerator;
 
@@ -31,7 +31,7 @@ final class EmailConfirmationListener implements EventSubscriberInterface
     private SessionInterface $session;
 
     public function __construct(
-        MailerInterface $mailer,
+        RegistrationMailer $mailer,
         TokenGenerator $tokenGenerator,
         UrlGeneratorInterface $router,
         SessionInterface $session

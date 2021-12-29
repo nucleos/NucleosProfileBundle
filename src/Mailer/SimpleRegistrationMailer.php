@@ -19,7 +19,7 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
-final class Mailer implements MailerInterface
+final class SimpleRegistrationMailer implements RegistrationMailer
 {
     private SymfonyMailer $mailer;
 

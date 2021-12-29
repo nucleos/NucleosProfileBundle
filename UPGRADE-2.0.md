@@ -11,6 +11,14 @@ The `@NucleosProfileBundle/Resources/config/routing/all.xml` routing configurati
 
 All listeneres are now registered by default. The `use_authentication_listener`, `use_listener` and `use_flash_notifications` configuration keys were removed.
 
+## Removed `Interface` suffix
+
+The `Interface` suffix was removed from all interfaces. All default implementation use specific class prefix.
+
+- `Nucleos\ProfileBundle\Mailer\MailerInterface` => `Nucleos\ProfileBundle\Mailer\RegistrationMailer`
+- `Nucleos\ProfileBundle\Mailer\NoopMailer` => `Nucleos\ProfileBundle\Mailer\NoopRegistrationMailer`
+- `Nucleos\ProfileBundle\Mailer\Mailer` => `Nucleos\ProfileBundle\Mailer\SimpleRegistrationMailer`
+-
 ## Deprecations
 
 All the deprecated code introduced on 1.8.x is removed on 2.0.

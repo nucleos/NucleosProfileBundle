@@ -11,4 +11,4 @@ All available configuration options are listed below with their default values.
                 from_email:         ~ # Required
                 enabled:            false # change to true for required email confirmation
         service:
-            mailer:                 nucleos_profile.mailer.default
+            mailer:                 nucleos_profile.mailer.simple
