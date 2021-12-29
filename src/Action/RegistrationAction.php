@@ -18,7 +18,7 @@ use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Event\FormEvent;
 use Nucleos\UserBundle\Model\UserInterface;
-use Nucleos\UserBundle\Model\UserManagerInterface;
+use Nucleos\UserBundle\Model\UserManager;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
@@ -35,7 +35,7 @@ final class RegistrationAction
 
     private FormFactoryInterface $formFactory;
 
-    private UserManagerInterface $userManager;
+    private UserManager $userManager;
 
     private Environment $twig;
 
@@ -44,7 +44,7 @@ final class RegistrationAction
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
         FormFactoryInterface $formFactory,
-        UserManagerInterface $userManager,
+        UserManager $userManager,
         RouterInterface $router,
         Environment $twig
     ) {
