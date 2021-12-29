@@ -46,11 +46,9 @@ final class SimpleRegistrationMailer implements RegistrationMailer
      */
     public function sendConfirmationEmailMessage(UserInterface $user): void
     {
-        $url  = $this->router->generate(
-            'nucleos_profile_registration_confirm',
-            ['token' => $user->getConfirmationToken()],
-            UrlGeneratorInterface::ABSOLUTE_URL
-        );
+        $url = $this->router->generate('nucleos_profile_registration_confirm', [
+            'token' => $user->getConfirmationToken(),
+        ], UrlGeneratorInterface::ABSOLUTE_URL);
 
         $mail = (new RegistrationMail())
             ->to(new Address($user->getEmail()))
@@ -62,7 +60,7 @@ final class SimpleRegistrationMailer implements RegistrationMailer
         ;
 
         if (null !== $this->fromEmail) {
-            $mail->from(Address::fromString($this->fromEmail));
+            $mail->from(new Address($this->fromEmail));
         }
 
         $this->mailer->send($mail);
