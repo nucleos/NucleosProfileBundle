@@ -37,7 +37,7 @@
     "require": {
         "php": "^8.0",
         "doctrine/persistence": "^2.2.2",
-        "nucleos/user-bundle": "^1.7",
+        "nucleos/user-bundle": "^2.0",
         "symfony/config": "^5.4",
         "symfony/dependency-injection": "^5.4",
         "symfony/event-dispatcher": "^5.4",
