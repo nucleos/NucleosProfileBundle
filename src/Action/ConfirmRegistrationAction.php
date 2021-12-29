@@ -14,7 +14,7 @@ namespace Nucleos\ProfileBundle\Action;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Event\GetResponseUserEvent;
-use Nucleos\UserBundle\Model\UserManagerInterface;
+use Nucleos\UserBundle\Model\UserManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,13 +25,13 @@ final class ConfirmRegistrationAction
 {
     private EventDispatcherInterface $eventDispatcher;
 
-    private UserManagerInterface $userManager;
+    private UserManager $userManager;
 
     private RouterInterface $router;
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,
-        UserManagerInterface $userManager,
+        UserManager $userManager,
         RouterInterface $router
     ) {
         $this->eventDispatcher = $eventDispatcher;

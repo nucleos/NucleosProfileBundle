@@ -11,7 +11,7 @@
 
 namespace Nucleos\ProfileBundle\Action;
 
-use Nucleos\UserBundle\Model\UserManagerInterface;
+use Nucleos\UserBundle\Model\UserManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,13 +20,13 @@ use Twig\Environment;
 
 final class CheckRegistrationMailAction
 {
-    private UserManagerInterface $userManager;
+    private UserManager $userManager;
 
     private Environment $twig;
 
     private RouterInterface $router;
 
-    public function __construct(UserManagerInterface $userManager, Environment $twig, RouterInterface $router)
+    public function __construct(UserManager $userManager, Environment $twig, RouterInterface $router)
     {
         $this->userManager = $userManager;
         $this->twig        = $twig;

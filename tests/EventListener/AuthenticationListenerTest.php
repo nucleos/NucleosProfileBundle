@@ -15,7 +15,7 @@ use Nucleos\ProfileBundle\EventListener\AuthenticationListener;
 use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Event\FilterUserResponseEvent;
 use Nucleos\UserBundle\Model\UserInterface;
-use Nucleos\UserBundle\Security\LoginManagerInterface;
+use Nucleos\UserBundle\Security\LoginManager;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,7 +42,7 @@ final class AuthenticationListenerTest extends TestCase
         $this->eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         $this->eventDispatcher->expects(static::once())->method('dispatch');
 
-        $loginManager   = $this->createMock(LoginManagerInterface::class);
+        $loginManager   = $this->createMock(LoginManager::class);
 
         $this->listener = new AuthenticationListener(
             $loginManager,
