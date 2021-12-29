@@ -13,7 +13,7 @@ namespace Nucleos\ProfileBundle\Tests\Routing;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\Routing\Loader\XmlFileLoader;
+use Symfony\Component\Routing\Loader\PhpFileLoader;
 use Symfony\Component\Routing\RouteCollection;
 
 final class RoutingTest extends TestCase
@@ -26,13 +26,13 @@ final class RoutingTest extends TestCase
     public function testLoadRouting(string $routeName, string $path, array $methods): void
     {
         $locator = new FileLocator();
-        $loader  = new XmlFileLoader($locator);
+        $loader  = new PhpFileLoader($locator);
 
         $collection    = new RouteCollection();
-        $subCollection = $loader->load(__DIR__.'/../../src/Resources/config/routing/profile.xml');
+        $subCollection = $loader->load(__DIR__.'/../../src/Resources/config/routing/profile.php');
         $subCollection->addPrefix('/profile');
         $collection->addCollection($subCollection);
-        $subCollection = $loader->load(__DIR__.'/../../src/Resources/config/routing/registration.xml');
+        $subCollection = $loader->load(__DIR__.'/../../src/Resources/config/routing/registration.php');
         $subCollection->addPrefix('/register');
         $collection->addCollection($subCollection);
 

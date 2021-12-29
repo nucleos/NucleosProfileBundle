@@ -62,7 +62,9 @@ final class AppKernel extends Kernel
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
         $routes->import('@NucleosUserBundle/Resources/config/routing/all.xml');
-        $routes->import(__DIR__.'/../../src/Resources/config/routing/all.xml');
+
+        $routes->import('@NucleosProfileBundle/Resources/config/routing/profile.php', '/profile');
+        $routes->import('@NucleosProfileBundle/Resources/config/routing/registration.php', '/register');
     }
 
     protected function configureContainer(ContainerBuilder $containerBuilder, LoaderInterface $loader): void
