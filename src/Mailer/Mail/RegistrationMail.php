@@ -18,7 +18,7 @@ use Symfony\Component\Mime\Part\AbstractPart;
 
 final class RegistrationMail extends TemplatedEmail
 {
-    private string $confirmationUrl;
+    private ?string $confirmationUrl = null;
 
     private UserInterface $user;
 
@@ -30,7 +30,7 @@ final class RegistrationMail extends TemplatedEmail
         $this->htmlTemplate('@NucleosProfile/Registration/email.html.twig');
     }
 
-    public function setConfirmationUrl(string $confirmationUrl): self
+    public function setConfirmationUrl(?string $confirmationUrl): self
     {
         $this->confirmationUrl = $confirmationUrl;
 
@@ -44,7 +44,7 @@ final class RegistrationMail extends TemplatedEmail
         return $this;
     }
 
-    public function getConfirmationUrl(): string
+    public function getConfirmationUrl(): ?string
     {
         return $this->confirmationUrl;
     }
