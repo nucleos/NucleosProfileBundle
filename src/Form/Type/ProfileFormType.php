@@ -21,6 +21,19 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 final class ProfileFormType extends AbstractType
 {
     /**
+     * @phpstan-var class-string<UserInterface>
+     */
+    private string $class;
+
+    /**
+     * @phpstan-param class-string<UserInterface> $class The User class name
+     */
+    public function __construct(string $class)
+    {
+        $this->class = $class;
+    }
+
+    /**
      * @param array<mixed> $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -40,7 +53,7 @@ final class ProfileFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'         => UserInterface::class,
+            'data_class'         => $this->class,
             'csrf_token_id'      => 'profile',
             'translation_domain' => 'NucleosProfileBundle',
         ]);

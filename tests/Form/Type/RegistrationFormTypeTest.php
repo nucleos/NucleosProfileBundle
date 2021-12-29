@@ -44,7 +44,7 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
     protected function getTypes(): array
     {
         return array_merge(parent::getTypes(), [
-            new RegistrationFormType(),
+            new RegistrationFormType(TestUser::class),
         ]);
     }
 }
