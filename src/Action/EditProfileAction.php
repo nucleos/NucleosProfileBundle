@@ -75,15 +75,7 @@ final class EditProfileAction
             return $event->getResponse();
         }
 
-        $form = $this->formFactory
-            ->create(ProfileFormType::class, $user, [
-                'validation_groups' => ['Profile', 'Default'],
-            ])
-            ->add('save', SubmitType::class, [
-                'label'  => 'profile.edit.submit',
-            ])
-        ;
-
+        $form = $this->createForm($user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -112,5 +104,17 @@ final class EditProfileAction
         );
 
         return $response;
+    }
+
+    private function createForm(UserInterface $user): FormInterface
+    {
+        return $this->formFactory
+            ->create(ProfileFormType::class, $user, [
+                'validation_groups' => ['Profile', 'Default'],
+            ])
+            ->add('save', SubmitType::class, [
+                'label'  => 'profile.edit.submit',
+            ])
+        ;
     }
 }

@@ -39,7 +39,7 @@ final class RegistrationFormType extends AbstractType
                 'getter'             => static function (UserInterface $user, FormInterface $form): string {
                     try {
                         return $user->getEmail();
-                    } catch (Exception $exception) {
+                    } catch (Exception) {
                         return '';
                     }
                 },
@@ -50,7 +50,7 @@ final class RegistrationFormType extends AbstractType
 
                     try {
                         $user->setEmail($value);
-                    } catch (Exception $exception) {
+                    } catch (Exception) {
                         throw new UnexpectedTypeException($value, 'string');
                     }
                 },
@@ -60,7 +60,7 @@ final class RegistrationFormType extends AbstractType
                 'getter'             => static function (UserInterface $user, FormInterface $form): string {
                     try {
                         return $user->getUsername();
-                    } catch (Exception $exception) {
+                    } catch (Exception) {
                         return '';
                     }
                 },
@@ -71,7 +71,7 @@ final class RegistrationFormType extends AbstractType
 
                     try {
                         $user->setUsername($value);
-                    } catch (Exception $exception) {
+                    } catch (Exception) {
                         throw new UnexpectedTypeException($value, 'string');
                     }
                 },

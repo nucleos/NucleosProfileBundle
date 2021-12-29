@@ -38,13 +38,14 @@ final class CheckRegistrationMailAction
      */
     public function __invoke(Request $request): Response
     {
-        $email = $request->getSession()->get('nucleos_profile_send_confirmation_email/email', '');
+        $session = $request->getSession();
+        $email   = $session->get('nucleos_profile_send_confirmation_email/email', '');
 
         if ('' === $email) {
             return new RedirectResponse($this->router->generate('nucleos_profile_registration_register'));
         }
 
-        $request->getSession()->remove('nucleos_profile_send_confirmation_email/email');
+        $session->remove('nucleos_profile_send_confirmation_email/email');
         $user = $this->userManager->findUserByEmail($email);
 
         if (null === $user) {

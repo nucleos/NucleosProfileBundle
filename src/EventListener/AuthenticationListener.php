@@ -52,9 +52,8 @@ final class AuthenticationListener implements EventSubscriberInterface
                 new UserEvent($event->getUser(), $event->getRequest()),
                 NucleosUserEvents::SECURITY_IMPLICIT_LOGIN
             );
-        } catch (AccountStatusException $ex) {
-            // We simply do not authenticate users which do not pass the user
-            // checker (not enabled, expired, etc.).
+        } catch (AccountStatusException) {
+            // We simply do not authenticate users which do not pass the user checker (not enabled, expired, etc.).
         }
     }
 }

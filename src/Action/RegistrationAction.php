@@ -66,15 +66,7 @@ final class RegistrationAction
             return $event->getResponse();
         }
 
-        $form = $this->formFactory
-            ->create(RegistrationFormType::class, $user, [
-                'validation_groups' => ['Registration', 'Default'],
-            ])
-            ->add('save', SubmitType::class, [
-                'label'  => 'registration.submit',
-            ])
-        ;
-
+        $form = $this->createForm($user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted()) {
@@ -112,5 +104,17 @@ final class RegistrationAction
         );
 
         return $response;
+    }
+
+    private function createForm(UserInterface $user): FormInterface
+    {
+        return $this->formFactory
+            ->create(RegistrationFormType::class, $user, [
+                'validation_groups' => ['Registration', 'Default'],
+            ])
+            ->add('save', SubmitType::class, [
+                'label'  => 'registration.submit',
+            ])
+        ;
     }
 }
