@@ -25,7 +25,7 @@ final class NucleosProfileExtensionTest extends TestCase
     {
         $this->createEmptyConfiguration();
 
-        $this->assertAlias('nucleos_profile.mailer.default', 'nucleos_profile.mailer');
+        $this->assertAlias('nucleos_profile.mailer.simple', 'nucleos_profile.mailer');
     }
 
     public function testUserLoadUtilService(): void

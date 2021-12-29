@@ -63,7 +63,7 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('service')
                     ->addDefaultsIfNotSet()
                         ->children()
-                            ->scalarNode('mailer')->defaultValue('nucleos_profile.mailer.default')->end()
+                            ->scalarNode('mailer')->defaultValue('nucleos_profile.mailer.simple')->end()
                         ->end()
                     ->end()
                 ->end()

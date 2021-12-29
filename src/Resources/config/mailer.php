@@ -11,15 +11,15 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Nucleos\ProfileBundle\Mailer\Mailer;
-use Nucleos\ProfileBundle\Mailer\NoopMailer;
+use Nucleos\ProfileBundle\Mailer\NoopRegistrationMailer;
+use Nucleos\ProfileBundle\Mailer\SimpleRegistrationMailer;
 use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
 return static function (ContainerConfigurator $container): void {
     $container->services()
 
-        ->set('nucleos_profile.mailer.default', Mailer::class)
+        ->set('nucleos_profile.mailer.simple', SimpleRegistrationMailer::class)
             ->args([
                 new Reference('mailer.mailer'),
                 new Reference('translator'),
@@ -27,7 +27,7 @@ return static function (ContainerConfigurator $container): void {
                 new Parameter('nucleos_profile.registration.confirmation.from_email'),
             ])
 
-        ->set('nucleos_profile.mailer.noop', NoopMailer::class)
+        ->set('nucleos_profile.mailer.noop', NoopRegistrationMailer::class)
 
     ;
 };

@@ -13,14 +13,10 @@ namespace Nucleos\ProfileBundle\Mailer;
 
 use Nucleos\UserBundle\Model\UserInterface;
 
-/**
- * This mailer does nothing.
- * It is used when the 'email' configuration is not set,
- * and allows to use this bundle without swiftmailer.
- */
-final class NoopMailer implements MailerInterface
+interface RegistrationMailer
 {
-    public function sendConfirmationEmailMessage(UserInterface $user): void
-    {
-    }
+    /**
+     * Send an email to a user to confirm the account creation.
+     */
+    public function sendConfirmationEmailMessage(UserInterface $user): void;
 }
