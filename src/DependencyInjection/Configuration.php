@@ -29,14 +29,6 @@ class Configuration implements ConfigurationInterface
 
         $rootNode = $treeBuilder->getRootNode();
 
-        $rootNode
-            ->children()
-                ->booleanNode('use_authentication_listener')->defaultTrue()->end()
-                ->booleanNode('use_listener')->defaultTrue()->end()
-                ->booleanNode('use_flash_notifications')->defaultTrue()->end()
-            ->end()
-        ;
-
         $this->addRegistrationSection($rootNode);
         $this->addServiceSection($rootNode);
 

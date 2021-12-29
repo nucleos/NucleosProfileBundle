@@ -13,6 +13,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Nucleos\ProfileBundle\EventListener\AlreadyLoggedinListener;
 use Nucleos\ProfileBundle\EventListener\AuthenticationListener;
+use Nucleos\ProfileBundle\EventListener\FlashListener;
 use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -33,5 +34,11 @@ return static function (ContainerConfigurator $container): void {
                 new Reference('router'),
             ])
 
+        ->set(FlashListener::class)
+            ->tag('kernel.event_subscriber')
+            ->args([
+                new Reference('session.flash_bag'),
+                new Reference('translator'),
+            ])
     ;
 };
