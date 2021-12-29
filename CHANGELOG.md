@@ -2,27 +2,40 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.0.0 - TBD
+## 2.0.0 - 2021-12-29
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [2.0.0](https://github.com/nucleos/NucleosProfileBundle/milestone/4)
 
-- Nothing.
+Backwards incompatible release (major)
 
-### Deprecated
+### 2.0.0
 
-- Nothing.
+- Total issues resolved: **6**
+- Total pull requests resolved: **13**
+- Total contributors: **1**
 
-### Removed
+#### Enhancement
 
-- Nothing.
+ - [444: Next major preparations](https://github.com/nucleos/NucleosProfileBundle/pull/444) thanks to @core23
+ - [415: Remove composer-bin plugin](https://github.com/nucleos/NucleosProfileBundle/pull/415) thanks to @core23
+ - [412: Update build tools](https://github.com/nucleos/NucleosProfileBundle/pull/412) thanks to @core23
+ - [384: Migrate YML translations to XLIFF](https://github.com/nucleos/NucleosProfileBundle/pull/384) thanks to @core23
+ - [382: Simplify profile editing / registration](https://github.com/nucleos/NucleosProfileBundle/pull/382) thanks to @core23
+ - [378: Add type hints](https://github.com/nucleos/NucleosProfileBundle/pull/378) thanks to @core23
+ - [377: Move `SubmitType` buttons to actions](https://github.com/nucleos/NucleosProfileBundle/pull/377) thanks to @core23
+ - [245: Migrate YML translations to XLIFF](https://github.com/nucleos/NucleosProfileBundle/issues/245) thanks to @core23
 
-### Fixed
+#### dependency
 
-- Nothing.
+ - [443: Add symfony 6 support](https://github.com/nucleos/NucleosProfileBundle/pull/443) thanks to @core23
+ - [436: Bump nucleos/user-bundle](https://github.com/nucleos/NucleosProfileBundle/pull/436) thanks to @core23
+ - [407: Bump symfony 5.4](https://github.com/nucleos/NucleosProfileBundle/pull/407) thanks to @core23
+ - [398: Drop PHP 7 support](https://github.com/nucleos/NucleosProfileBundle/pull/398) thanks to @core23
+ - [375: Drop support for symfony 4.4](https://github.com/nucleos/NucleosProfileBundle/pull/375) thanks to @core23
+ - [373: Drop support for PHP 7.3](https://github.com/nucleos/NucleosProfileBundle/pull/373) thanks to @core23
 
 ## 1.8.0 - 2021-12-29
 
