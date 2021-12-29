@@ -31,18 +31,8 @@ final class NucleosProfileExtension extends Extension
         $config = $processor->processConfiguration($configuration, $configs);
 
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-
-        foreach (['mailer', 'listeners'] as $basename) {
-            $loader->load(sprintf('%s.php', $basename));
-        }
-
-        if (!$config['use_authentication_listener']) {
-            $container->removeDefinition('nucleos_profile.listener.authentication');
-        }
-
-        if ($config['use_flash_notifications']) {
-            $loader->load('flash_notifications.php');
-        }
+        $loader->load('mailer.php');
+        $loader->load('listeners.php');
 
         $this->loadRegistration($config['registration'], $container, $loader);
         $this->loadProfile($loader);

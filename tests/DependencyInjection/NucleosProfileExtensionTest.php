@@ -42,13 +42,6 @@ final class NucleosProfileExtensionTest extends TestCase
         $this->assertHasDefinition(FlashListener::class);
     }
 
-    public function testUserLoadFlashesCanBeDisabled(): void
-    {
-        $this->createFullConfiguration();
-
-        $this->assertNotHasDefinition(FlashListener::class);
-    }
-
     private function createEmptyConfiguration(): void
     {
         $this->configuration = new ContainerBuilder();
@@ -72,8 +65,6 @@ final class NucleosProfileExtensionTest extends TestCase
     private function getFullConfig(): array
     {
         $yaml   = <<<'EOF'
-use_listener: true
-use_flash_notifications: false
 registration:
     confirmation:
         from_email: register@acme.org
