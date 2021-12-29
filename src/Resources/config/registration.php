@@ -16,6 +16,7 @@ use Nucleos\ProfileBundle\Action\ConfirmRegistrationAction;
 use Nucleos\ProfileBundle\Action\RegistrationAction;
 use Nucleos\ProfileBundle\Action\RegistrationConfirmedAction;
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
+use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
 return static function (ContainerConfigurator $container): void {
@@ -23,6 +24,9 @@ return static function (ContainerConfigurator $container): void {
 
         ->set(RegistrationFormType::class)
             ->tag('form.type')
+            ->args([
+                new Parameter('nucleos_user.model.user.class'),
+            ])
 
         ->set(RegistrationAction::class)
             ->public()

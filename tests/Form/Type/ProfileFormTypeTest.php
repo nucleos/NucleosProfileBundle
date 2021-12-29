@@ -39,7 +39,7 @@ final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
     protected function getTypes(): array
     {
         return array_merge(parent::getTypes(), [
-            new ProfileFormType(),
+            new ProfileFormType(TestUser::class),
         ]);
     }
 }

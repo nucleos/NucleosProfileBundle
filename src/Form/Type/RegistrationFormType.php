@@ -26,6 +26,19 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 final class RegistrationFormType extends AbstractType
 {
     /**
+     * @phpstan-var class-string<UserInterface>
+     */
+    private string $class;
+
+    /**
+     * @phpstan-param class-string<UserInterface> $class The User class name
+     */
+    public function __construct(string $class)
+    {
+        $this->class = $class;
+    }
+
+    /**
      * @param array<mixed> $options
      *
      * @SuppressWarnings(PHPMD.NPathComplexity)
@@ -93,7 +106,7 @@ final class RegistrationFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'         => UserInterface::class,
+            'data_class'         => $this->class,
             'csrf_token_id'      => 'registration',
             'translation_domain' => 'NucleosProfileBundle',
             'validation_groups'  => [],
