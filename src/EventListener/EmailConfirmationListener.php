@@ -17,7 +17,7 @@ use Nucleos\ProfileBundle\NucleosProfileEvents;
 use Nucleos\UserBundle\Util\TokenGenerator;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 final class EmailConfirmationListener implements EventSubscriberInterface
@@ -28,18 +28,18 @@ final class EmailConfirmationListener implements EventSubscriberInterface
 
     private UrlGeneratorInterface $router;
 
-    private SessionInterface $session;
+    private RequestStack $requestStack;
 
     public function __construct(
         RegistrationMailer $mailer,
         TokenGenerator $tokenGenerator,
         UrlGeneratorInterface $router,
-        SessionInterface $session
+        RequestStack $requestStack
     ) {
-        $this->mailer         = $mailer;
-        $this->tokenGenerator = $tokenGenerator;
-        $this->router         = $router;
-        $this->session        = $session;
+        $this->mailer              = $mailer;
+        $this->tokenGenerator      = $tokenGenerator;
+        $this->router              = $router;
+        $this->requestStack        = $requestStack;
     }
 
     /**
@@ -63,7 +63,7 @@ final class EmailConfirmationListener implements EventSubscriberInterface
 
         $this->mailer->sendConfirmationEmailMessage($user);
 
-        $this->session->set('nucleos_profile_send_confirmation_email/email', $user->getEmail());
+        $this->requestStack->getSession()->set('nucleos_profile_send_confirmation_email/email', $user->getEmail());
 
         $event->setResponse(
             new RedirectResponse($this->router->generate('nucleos_profile_registration_check_email'))
