@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\EventDispatcher\Event;
 
-class GetResponseRegistrationEvent extends Event
+final class GetResponseRegistrationEvent extends Event
 {
     protected ?Request $request;
 
