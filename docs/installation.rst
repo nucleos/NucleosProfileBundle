@@ -94,8 +94,14 @@ logging in, creating users, etc.
 .. code-block:: yaml
 
     # config/routes/nucleos_profile.yaml
-    nucleos_profile:
-        resource: "@NucleosProfileBundle/Resources/config/routing/all.xml"
+    nucleos_profile_profile:
+        resource: "@NucleosProfileBundle/Resources/config/routing/profile.php"
+        prefix: /profile
+
+    nucleos_profile_change_registration:
+        resource: "@NucleosProfileBundle/Resources/config/routing/registration.php"
+        prefix: /register
+
 
 .. _Symfony documentation: https://symfony.com/doc/current/book/translation.html
 .. _NucleosUserBundle documentation: https://nucleosuserbundle.readthedocs.io
