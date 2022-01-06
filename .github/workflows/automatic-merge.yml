@@ -5,12 +5,7 @@ on:
     - cron: '0 */2 * * *'
 
 jobs:
-  merge:
-    name: "Merge Pull Requests"
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: "Merge"
-      uses: "nucleos/auto-merge-action@1.2.0"
-      env:
-        "GITHUB_TOKEN": ${{ secrets.ORGANIZATION_ADMIN_TOKEN }}
+  run:
+    uses: "nucleos/actions/.github/workflows/automatic-merge.yml@main"
+    secrets:
+      GITHUB_ADMIN_TOKEN: "${{ secrets.ORGANIZATION_ADMIN_TOKEN }}"
