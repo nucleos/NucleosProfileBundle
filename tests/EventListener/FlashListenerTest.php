@@ -44,7 +44,7 @@ final class FlashListenerTest extends TestCase
 
         $translator = $this->createMock(TranslatorInterface::class);
         $translator->method('trans')
-            ->willReturn(static::returnArgument(0))
+            ->willReturnArgument(0)
         ;
 
         $this->listener = new FlashListener($requestStack, $translator);
