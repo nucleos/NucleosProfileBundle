@@ -47,7 +47,7 @@ final class NucleosProfileExtensionTest extends TestCase
         $this->configuration = new ContainerBuilder();
         $loader              = new NucleosProfileExtension();
         $loader->load([], $this->configuration);
-        static::assertInstanceOf(ContainerBuilder::class, $this->configuration);
+        static::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
     }
 
     private function createFullConfiguration(): void
@@ -56,7 +56,7 @@ final class NucleosProfileExtensionTest extends TestCase
         $loader              = new NucleosProfileExtension();
         $config              = $this->getFullConfig();
         $loader->load([$config], $this->configuration);
-        static::assertInstanceOf(ContainerBuilder::class, $this->configuration);
+        static::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
     }
 
     /**
@@ -84,11 +84,6 @@ EOF;
 
     private function assertHasDefinition(string $id): void
     {
-        static::assertTrue(($this->configuration->hasDefinition($id) ? true : $this->configuration->hasAlias($id)));
-    }
-
-    private function assertNotHasDefinition(string $id): void
-    {
-        static::assertFalse(($this->configuration->hasDefinition($id) ? true : $this->configuration->hasAlias($id)));
+        static::assertTrue($this->configuration->hasDefinition($id) ? true : $this->configuration->hasAlias($id));
     }
 }
