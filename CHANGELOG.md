@@ -2,27 +2,31 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.1.0 - TBD
+## 2.1.0 - 2022-12-17
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [2.1.0](https://github.com/nucleos/NucleosProfileBundle/milestone/16)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 2.1.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **5**
+- Total contributors: **3**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [482: Allow newer Doctrine dependency version](https://github.com/nucleos/NucleosProfileBundle/pull/482) thanks to @Guite
+ - [478: Update symfony contracts to ^1.0 || ^2.0 || ^3.0](https://github.com/nucleos/NucleosProfileBundle/pull/478) thanks to @renovate[bot]
+ - [477: Update dependency doctrine/persistence to ^2.2.2 || ^3.0.0](https://github.com/nucleos/NucleosProfileBundle/pull/477) thanks to @renovate[bot]
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [448: Use shared pipelines](https://github.com/nucleos/NucleosProfileBundle/pull/448) thanks to @core23
+ - [445: Rework build triggers](https://github.com/nucleos/NucleosProfileBundle/pull/445) thanks to @core23
 
 ## 2.0.0 - 2021-12-29
 
