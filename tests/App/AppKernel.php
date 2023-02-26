@@ -36,10 +36,15 @@ final class AppKernel extends Kernel
     public function registerBundles(): iterable
     {
         yield new FrameworkBundle();
+
         yield new TwigBundle();
+
         yield new SecurityBundle();
+
         yield new DoctrineBundle();
+
         yield new NucleosUserBundle();
+
         yield new NucleosProfileBundle();
     }
 

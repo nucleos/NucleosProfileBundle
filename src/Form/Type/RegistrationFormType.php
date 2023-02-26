@@ -56,7 +56,7 @@ final class RegistrationFormType extends AbstractType
                         return '';
                     }
                 },
-                'setter' => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
+                'setter'             => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
                     if (null === $value) {
                         return;
                     }
@@ -77,7 +77,7 @@ final class RegistrationFormType extends AbstractType
                         return '';
                     }
                 },
-                'setter' => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
+                'setter'             => static function (UserInterface &$user, ?string $value, FormInterface $form): void {
                     if (null === $value) {
                         return;
                     }
