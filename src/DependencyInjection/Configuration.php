@@ -31,6 +31,7 @@ final class Configuration implements ConfigurationInterface
 
     private function addRegistrationSection(ArrayNodeDefinition $node): void
     {
+        /** @psalm-suppress UndefinedInterfaceMethod */
         $node
             ->children()
                 ->arrayNode('registration')
@@ -51,6 +52,7 @@ final class Configuration implements ConfigurationInterface
 
     private function addServiceSection(ArrayNodeDefinition $node): void
     {
+        /** @psalm-suppress UndefinedInterfaceMethod */
         $node
             ->addDefaultsIfNotSet()
             ->children()
