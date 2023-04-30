@@ -47,6 +47,9 @@ $config = (new PhpCsFixer\Config())
            'import_constants' => false,
            'import_functions' => false,
         ],
+        'phpdoc_to_comment' => [
+            'ignored_tags' => ['psalm-suppress'],
+        ],
     ])
     ->setFinder($finder)
 ;
