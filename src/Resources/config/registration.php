@@ -61,6 +61,5 @@ return static function (ContainerConfigurator $container): void {
                 new Reference('security.helper'),
                 new Reference('security.token_storage'),
             ])
-
     ;
 };

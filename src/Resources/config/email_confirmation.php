@@ -25,6 +25,5 @@ return static function (ContainerConfigurator $container): void {
                 new Reference('router'),
                 new Reference('request_stack'),
             ])
-
     ;
 };
