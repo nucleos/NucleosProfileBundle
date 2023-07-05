@@ -60,7 +60,7 @@ final class SimpleRegistrationMailer implements RegistrationMailer
         ;
 
         if (null !== $this->fromEmail) {
-            $mail->from(new Address($this->fromEmail));
+            $mail->from(Address::create($this->fromEmail));
         }
 
         $this->mailer->send($mail);
