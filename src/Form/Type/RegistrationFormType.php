@@ -109,7 +109,6 @@ final class RegistrationFormType extends AbstractType
             'data_class'         => $this->class,
             'csrf_token_id'      => 'registration',
             'translation_domain' => 'NucleosProfileBundle',
-            'validation_groups'  => [],
         ]);
     }
 }

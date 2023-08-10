@@ -110,7 +110,7 @@ final class RegistrationAction
     {
         return $this->formFactory
             ->create(RegistrationFormType::class, $user, [
-                'validation_groups' => ['Registration', 'Default'],
+                'validation_groups' => ['Registration', 'User', 'Default'],
             ])
             ->add('save', SubmitType::class, [
                 'label'  => 'registration.submit',

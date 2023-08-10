@@ -110,7 +110,7 @@ final class EditProfileAction
     {
         return $this->formFactory
             ->create(ProfileFormType::class, $user, [
-                'validation_groups' => ['Profile', 'Default'],
+                'validation_groups' => ['Profile', 'User', 'Default'],
             ])
             ->add('save', SubmitType::class, [
                 'label'  => 'profile.edit.submit',
