@@ -20,6 +20,7 @@ use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
+use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
@@ -66,7 +67,12 @@ final class AppKernel extends Kernel
     protected function configureRoutes(RoutingConfigurator $routes): void
     {
         $routes->import('@NucleosUserBundle/Resources/config/routing/security.php');
-        $routes->import('@NucleosUserBundle/Resources/config/routing/change_password.php');
+
+        try {
+            $routes->import('@NucleosUserBundle/Resources/config/routing/update_security.php');
+        } catch (LoaderLoadException) {
+            $routes->import('@NucleosUserBundle/Resources/config/routing/change_password.php');
+        }
         $routes->import('@NucleosUserBundle/Resources/config/routing/resetting.php')
             ->prefix('/resetting')
         ;
