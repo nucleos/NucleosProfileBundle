@@ -45,7 +45,7 @@ final class RoutingTest extends TestCase
     /**
      * @return string[][]|string[][][]
      */
-    public function loadRoutingProvider(): array
+    public static function loadRoutingProvider(): array
     {
         return [
             ['nucleos_profile_profile_show', '/profile/', ['GET']],
