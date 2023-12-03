@@ -31,11 +31,11 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
         ];
         $form->submit($formData);
 
-        static::assertTrue($form->isSynchronized());
-        static::assertSame($user, $form->getData());
-        static::assertSame('bar', $user->getUsername());
-        static::assertSame('john@doe.com', $user->getEmail());
-        static::assertSame('test', $user->getPlainPassword());
+        self::assertTrue($form->isSynchronized());
+        self::assertSame($user, $form->getData());
+        self::assertSame('bar', $user->getUsername());
+        self::assertSame('john@doe.com', $user->getEmail());
+        self::assertSame('test', $user->getPlainPassword());
     }
 
     /**
