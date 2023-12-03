@@ -40,7 +40,7 @@ final class AuthenticationListenerTest extends TestCase
         $this->event           = new FilterUserResponseEvent($user, $request, $response);
 
         $this->eventDispatcher = $this->createMock(EventDispatcherInterface::class);
-        $this->eventDispatcher->expects(static::once())->method('dispatch');
+        $this->eventDispatcher->expects(self::once())->method('dispatch');
 
         $loginManager   = $this->createMock(LoginManager::class);
 

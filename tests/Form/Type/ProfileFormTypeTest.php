@@ -27,10 +27,10 @@ final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
         ];
         $form->submit($formData);
 
-        static::assertTrue($form->isSynchronized());
-        static::assertSame($user, $form->getData());
-        static::assertSame('Europe/Berlin', $user->getTimezone());
-        static::assertSame('de_DE', $user->getLocale());
+        self::assertTrue($form->isSynchronized());
+        self::assertSame($user, $form->getData());
+        self::assertSame('Europe/Berlin', $user->getTimezone());
+        self::assertSame('de_DE', $user->getLocale());
     }
 
     /**

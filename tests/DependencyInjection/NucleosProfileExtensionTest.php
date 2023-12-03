@@ -47,7 +47,7 @@ final class NucleosProfileExtensionTest extends TestCase
         $this->configuration = new ContainerBuilder();
         $loader              = new NucleosProfileExtension();
         $loader->load([], $this->configuration);
-        static::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
+        self::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
     }
 
     private function createFullConfiguration(): void
@@ -56,7 +56,7 @@ final class NucleosProfileExtensionTest extends TestCase
         $loader              = new NucleosProfileExtension();
         $config              = $this->getFullConfig();
         $loader->load([$config], $this->configuration);
-        static::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
+        self::assertTrue($this->configuration->hasAlias('nucleos_profile.mailer'));
     }
 
     /**
@@ -79,11 +79,11 @@ EOF;
 
     private function assertAlias(string $value, string $key): void
     {
-        static::assertSame($value, (string) $this->configuration->getAlias($key), sprintf('%s alias is correct', $key));
+        self::assertSame($value, (string) $this->configuration->getAlias($key), sprintf('%s alias is correct', $key));
     }
 
     private function assertHasDefinition(string $id): void
     {
-        static::assertTrue($this->configuration->hasDefinition($id) ? true : $this->configuration->hasAlias($id));
+        self::assertTrue($this->configuration->hasDefinition($id) ? true : $this->configuration->hasAlias($id));
     }
 }
