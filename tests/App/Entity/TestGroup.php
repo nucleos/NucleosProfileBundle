@@ -15,6 +15,4 @@ namespace Nucleos\ProfileBundle\Tests\App\Entity;
 
 use Nucleos\UserBundle\Model\Group;
 
-class TestGroup extends Group
-{
-}
+class TestGroup extends Group {}

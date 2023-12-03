@@ -18,6 +18,4 @@ use Nucleos\UserBundle\Model\User;
 /**
  * @phpstan-extends User<\Nucleos\UserBundle\Model\GroupInterface>
  */
-class TestUser extends User
-{
-}
+class TestUser extends User {}
