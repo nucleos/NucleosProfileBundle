@@ -19,7 +19,7 @@ use Symfony\Component\Routing\RouteCollection;
 final class RoutingTest extends TestCase
 {
     /**
-     * @dataProvider loadRoutingProvider
+     * @dataProvider provideLoadRoutingCases
      *
      * @param string[] $methods
      */
@@ -37,15 +37,15 @@ final class RoutingTest extends TestCase
         $collection->addCollection($subCollection);
 
         $route = $collection->get($routeName);
-        static::assertNotNull($route, sprintf('The route "%s" should exists', $routeName));
-        static::assertSame($path, $route->getPath());
-        static::assertSame($methods, $route->getMethods());
+        self::assertNotNull($route, sprintf('The route "%s" should exists', $routeName));
+        self::assertSame($path, $route->getPath());
+        self::assertSame($methods, $route->getMethods());
     }
 
     /**
      * @return string[][]|string[][][]
      */
-    public static function loadRoutingProvider(): array
+    public static function provideLoadRoutingCases(): iterable
     {
         return [
             ['nucleos_profile_profile_show', '/profile/', ['GET']],

@@ -13,6 +13,4 @@ namespace Nucleos\ProfileBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class NucleosProfileBundle extends Bundle
-{
-}
+final class NucleosProfileBundle extends Bundle {}

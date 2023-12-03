@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.14.2@3538fe1955d47f6ee926c0769d71af6db08aa488">
+<files psalm-version="5.16.0@2897ba636551a8cb61601cc26f6ccfbba6c36591">
   <file src="src/Action/EditProfileAction.php">
-    <InvalidNullableReturnType occurrences="1">
+    <InvalidNullableReturnType>
       <code>Response</code>
     </InvalidNullableReturnType>
-    <NullableReturnStatement occurrences="1">
-      <code>$event-&gt;getResponse()</code>
-    </NullableReturnStatement>
-  </file>
-  <file src="src/Action/RegistrationAction.php">
-    <InvalidNullableReturnType occurrences="1">
-      <code>Response</code>
-    </InvalidNullableReturnType>
-    <NullableReturnStatement occurrences="1">
-      <code>$event-&gt;getResponse()</code>
+    <NullableReturnStatement>
+      <code><![CDATA[$event->getResponse()]]></code>
     </NullableReturnStatement>
   </file>
 </files>

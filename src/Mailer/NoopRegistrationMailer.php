@@ -20,7 +20,5 @@ use Nucleos\UserBundle\Model\UserInterface;
  */
 final class NoopRegistrationMailer implements RegistrationMailer
 {
-    public function sendConfirmationEmailMessage(UserInterface $user): void
-    {
-    }
+    public function sendConfirmationEmailMessage(UserInterface $user): void {}
 }
