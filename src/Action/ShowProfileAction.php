@@ -12,9 +12,9 @@
 namespace Nucleos\ProfileBundle\Action;
 
 use Nucleos\UserBundle\Model\UserInterface;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-use Symfony\Component\Security\Core\Security;
 use Twig\Environment;
 
 final class ShowProfileAction
