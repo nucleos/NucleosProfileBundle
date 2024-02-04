@@ -12,12 +12,12 @@
 namespace Nucleos\ProfileBundle\Action;
 
 use Nucleos\UserBundle\Model\UserInterface;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-use Symfony\Component\Security\Core\Security;
 use Twig\Environment;
 
 final class RegistrationConfirmedAction
