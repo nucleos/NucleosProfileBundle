@@ -17,11 +17,11 @@ use Nucleos\UserBundle\Event\GetResponseLoginEvent;
 use Nucleos\UserBundle\Event\GetResponseUserEvent;
 use Nucleos\UserBundle\Model\UserInterface;
 use Nucleos\UserBundle\NucleosUserEvents;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\Security\Core\Security;
 
 final class AlreadyLoggedinListener implements EventSubscriberInterface
 {
