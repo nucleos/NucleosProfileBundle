@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Nucleos\ProfileBundle\Tests\App;
 
+use DAMA\DoctrineTestBundle\DAMADoctrineTestBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Nucleos\ProfileBundle\NucleosProfileBundle;
 use Nucleos\UserBundle\NucleosUserBundle;
@@ -29,9 +30,9 @@ final class AppKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    public function __construct()
+    public function __construct(string $environment = 'test', bool $debug = false)
     {
-        parent::__construct('test', false);
+        parent::__construct($environment, $debug);
     }
 
     public function registerBundles(): iterable
@@ -45,6 +46,8 @@ final class AppKernel extends Kernel
         yield new DoctrineBundle();
 
         yield new NucleosUserBundle();
+
+        yield new DAMADoctrineTestBundle();
 
         yield new NucleosProfileBundle();
     }
