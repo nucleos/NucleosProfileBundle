@@ -25,6 +25,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $containerConfigurator->extension('framework', ['session' => ['storage_factory_id' => 'session.storage.factory.mock_file', 'handler_id' => null]]);
 
+    $containerConfigurator->extension('framework', [
+        'mailer' => [
+            'dsn'      => 'null://null',
+        ],
+    ]);
+
     $containerConfigurator->extension('twig', ['strict_variables' => true]);
 
     $containerConfigurator->extension('twig', ['exception_controller' => null]);
@@ -77,5 +83,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $containerConfigurator->extension('nucleos_user', ['group' => ['group_class' => TestGroup::class]]);
 
-    $containerConfigurator->extension('nucleos_user', ['loggedin' => ['route' => 'home']]);
+    $containerConfigurator->extension('nucleos_user', ['loggedin' => ['route' => 'nucleos_user_update_security']]);
+
+    $containerConfigurator->extension('nucleos_profile', ['registration' => ['confirmation' => ['enabled' => true, 'from_email' => 'no-reply@example.com']]]);
+
+    $containerConfigurator->extension('dama_doctrine_test', ['enable_static_connection' => true, 'enable_static_meta_data_cache' => true, 'enable_static_query_cache' => true]);
 };

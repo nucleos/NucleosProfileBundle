@@ -42,9 +42,6 @@ final class EmailConfirmationListener implements EventSubscriberInterface
         $this->requestStack        = $requestStack;
     }
 
-    /**
-     * @return array<string, string>
-     */
     public static function getSubscribedEvents(): array
     {
         return [
