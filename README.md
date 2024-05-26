@@ -9,7 +9,7 @@ NucleosProfileBundle
 [![Monthly Downloads](https://poser.pugx.org/nucleos/profile-bundle/d/monthly)](https://packagist.org/packages/nucleos/profile-bundle)
 [![Daily Downloads](https://poser.pugx.org/nucleos/profile-bundle/d/daily)](https://packagist.org/packages/nucleos/profile-bundle)
 
-[![Continuous Integration](https://github.com/nucleos/NucleosProfileBundle/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/nucleos/NucleosProfileBundle/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
+[![Continuous Integration](https://github.com/nucleos/NucleosProfileBundle/actions/workflows/continuous-integration.yml/badge.svg?event=push)](https://github.com/nucleos/NucleosProfileBundle/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/NucleosProfileBundle/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosProfileBundle)
 [![Type Coverage](https://shepherd.dev/github/nucleos/NucleosProfileBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosProfileBundle)
 
