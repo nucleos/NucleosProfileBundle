@@ -14,6 +14,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 use Nucleos\ProfileBundle\EventListener\AlreadyLoggedinListener;
 use Nucleos\ProfileBundle\EventListener\AuthenticationListener;
 use Nucleos\ProfileBundle\EventListener\FlashListener;
+use Nucleos\ProfileBundle\EventListener\ProfileChangeListener;
 use Symfony\Component\DependencyInjection\Parameter;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -32,6 +33,12 @@ return static function (ContainerConfigurator $container): void {
             ->args([
                 new Reference('security.helper'),
                 new Reference('router'),
+            ])
+
+        ->set(ProfileChangeListener::class)
+            ->tag('kernel.event_subscriber')
+            ->args([
+                new Reference('event_dispatcher'),
             ])
 
         ->set(FlashListener::class)

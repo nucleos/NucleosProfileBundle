@@ -20,6 +20,13 @@ use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 final class ProfileChangeListener implements EventSubscriberInterface
 {
+    private readonly EventDispatcherInterface $eventDispatcher;
+
+    public function __construct(EventDispatcherInterface $eventDispatcher)
+    {
+        $this->eventDispatcher = $eventDispatcher;
+    }
+
     /**
      * @return array<string, string>
      */
@@ -30,9 +37,9 @@ final class ProfileChangeListener implements EventSubscriberInterface
         ];
     }
 
-    public function profileChanged(FilterUserResponseEvent $event, string $eventName, EventDispatcherInterface $eventDispatcher): void
+    public function profileChanged(FilterUserResponseEvent $event): void
     {
-        $eventDispatcher->dispatch(new UserEvent($event->getUser(), $event->getRequest()), NucleosUserEvents::USER_LOCALE_CHANGED);
-        $eventDispatcher->dispatch(new UserEvent($event->getUser(), $event->getRequest()), NucleosUserEvents::USER_TIMEZONE_CHANGED);
+        $this->eventDispatcher->dispatch(new UserEvent($event->getUser(), $event->getRequest()), NucleosUserEvents::USER_LOCALE_CHANGED);
+        $this->eventDispatcher->dispatch(new UserEvent($event->getUser(), $event->getRequest()), NucleosUserEvents::USER_TIMEZONE_CHANGED);
     }
 }
