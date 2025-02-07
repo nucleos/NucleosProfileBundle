@@ -81,7 +81,7 @@ class RegistrationWebTest extends WebTestCase
 
     private function performConfirm(KernelBrowser $client, TestUser $user): void
     {
-        $client->request('GET', sprintf('/register/confirm/%s', $user->getConfirmationToken()));
+        $client->request('GET', \sprintf('/register/confirm/%s', $user->getConfirmationToken()));
 
         self::assertResponseRedirects('/register/confirmed');
 
