@@ -79,7 +79,7 @@ EOF;
 
     private function assertAlias(string $value, string $key): void
     {
-        self::assertSame($value, (string) $this->configuration->getAlias($key), sprintf('%s alias is correct', $key));
+        self::assertSame($value, (string) $this->configuration->getAlias($key), \sprintf('%s alias is correct', $key));
     }
 
     private function assertHasDefinition(string $id): void
