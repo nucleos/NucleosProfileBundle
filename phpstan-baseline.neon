@@ -1,2 +1,2091 @@
 parameters:
 	ignoreErrors:
+		-
+			message: "#^Call to method findUserByEmail\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 2
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Call to method getSession\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 2
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__invoke\\(\\) should return Symfony\\\\Component\\\\HttpFoundation\\\\Response but returns Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse\\.$#"
+			count: 2
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__invoke\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Parameter \\$twig of method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__construct\\(\\) has invalid type Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Parameter \\$userManager of method Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface as its type\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:\\$twig has unknown class Twig\\\\Environment as its type\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\CheckRegistrationMailAction\\:\\:\\$userManager has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager as its type\\.$#"
+			count: 1
+			path: src/Action/CheckRegistrationMailAction.php
+
+		-
+			message: "#^Call to method findUserByConfirmationToken\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 2
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Call to method getResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Call to method updateUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent not found\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent not found\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 2
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:__invoke\\(\\) should return Symfony\\\\Component\\\\HttpFoundation\\\\Response but returns Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:__invoke\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Parameter \\$userManager of method Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface as its type\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\ConfirmRegistrationAction\\:\\:\\$userManager has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager as its type\\.$#"
+			count: 1
+			path: src/Action/ConfirmRegistrationAction.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:getResponse\\(\\)\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method create\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormFactoryInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method createView\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method getResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent\\.$#"
+			count: 2
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method handleRequest\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method isSubmitted\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method isValid\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to method updateUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\SubmitType not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException not found\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:createForm\\(\\) has invalid return type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:updateUser\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$form of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:updateUser\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$formFactory of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormFactoryInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__invoke\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:updateUser\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$security of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$twig of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__construct\\(\\) has invalid type Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:createForm\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:updateUser\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Parameter \\$userManager of method Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:\\$formFactory has unknown class Symfony\\\\Component\\\\Form\\\\FormFactoryInterface as its type\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface as its type\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:\\$security has unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security as its type\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:\\$twig has unknown class Twig\\\\Environment as its type\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\EditProfileAction\\:\\:\\$userManager has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager as its type\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Throwing object of an unknown class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException\\.$#"
+			count: 1
+			path: src/Action/EditProfileAction.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:getResponse\\(\\)\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method create\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormFactoryInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method createUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method createView\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method getResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FormEvent\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method handleRequest\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method isSubmitted\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method isValid\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method updateUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\SubmitType not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\FormEvent not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:createForm\\(\\) has invalid return type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:updateUser\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$form of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:updateUser\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$formFactory of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormFactoryInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__invoke\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:updateUser\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$twig of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__construct\\(\\) has invalid type Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:createForm\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:updateUser\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Parameter \\$userManager of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserManager\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:\\$formFactory has unknown class Symfony\\\\Component\\\\Form\\\\FormFactoryInterface as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:\\$twig has unknown class Twig\\\\Environment as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationAction\\:\\:\\$userManager has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserManager as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationAction.php
+
+		-
+			message: "#^Call to method get\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\SessionInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method getSession\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method getToken\\(\\) on an unknown class Symfony\\\\Component\\\\Security\\\\Core\\\\Authentication\\\\Token\\\\Storage\\\\TokenStorageInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method has\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\SessionInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Cannot call method getProviderKey\\(\\) on class\\-string\\|object\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException not found\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:__invoke\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Parameter \\$security of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Parameter \\$session of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:getTargetUrlFromSession\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\SessionInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Parameter \\$tokenStorage of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Security\\\\Core\\\\Authentication\\\\Token\\\\Storage\\\\TokenStorageInterface\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Parameter \\$twig of method Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:__construct\\(\\) has invalid type Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:\\$security has unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:\\$tokenStorage has unknown class Symfony\\\\Component\\\\Security\\\\Core\\\\Authentication\\\\Token\\\\Storage\\\\TokenStorageInterface as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\RegistrationConfirmedAction\\:\\:\\$twig has unknown class Twig\\\\Environment as its type\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Throwing object of an unknown class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException\\.$#"
+			count: 1
+			path: src/Action/RegistrationConfirmedAction.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException not found\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Action\\\\ShowProfileAction\\:\\:__invoke\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Parameter \\$security of method Nucleos\\\\ProfileBundle\\\\Action\\\\ShowProfileAction\\:\\:__construct\\(\\) has invalid type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Parameter \\$twig of method Nucleos\\\\ProfileBundle\\\\Action\\\\ShowProfileAction\\:\\:__construct\\(\\) has invalid type Twig\\\\Environment\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\ShowProfileAction\\:\\:\\$security has unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security as its type\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Action\\\\ShowProfileAction\\:\\:\\$twig has unknown class Twig\\\\Environment as its type\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Throwing object of an unknown class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccessDeniedException\\.$#"
+			count: 1
+			path: src/Action/ShowProfileAction.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$request \\(Symfony\\\\Component\\\\HttpFoundation\\\\Request\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:getRequest\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:getResponse\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:getUser\\(\\) has invalid return type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Parameter \\$response of method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:setResponse\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Response\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:\\$request has unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request as its type\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:\\$response has unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Response as its type\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:\\$user has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface as its type\\.$#"
+			count: 1
+			path: src/Event/GetResponseRegistrationEvent.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:getUser\\(\\) has invalid return type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:__construct\\(\\) calls parent\\:\\:__construct\\(\\) but Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent does not extend any class\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Parameter \\$form of method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:\\$user has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface as its type\\.$#"
+			count: 1
+			path: src/Event/UserFormEvent.php
+
+		-
+			message: "#^Access to constant SECURITY_LOGIN_COMPLETED on an unknown class Nucleos\\\\UserBundle\\\\NucleosUserEvents\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Access to constant SECURITY_LOGIN_INITIALIZE on an unknown class Nucleos\\\\UserBundle\\\\NucleosUserEvents\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Access to property \\$server on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 2
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method getRequest\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseLoginEvent\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method getUri\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 2
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method setResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseLoginEvent\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Call to method setResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 2
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 2
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:getRedirect\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\#1 \\$response of method Nucleos\\\\ProfileBundle\\\\Event\\\\GetResponseRegistrationEvent\\:\\:setResponse\\(\\) expects Symfony\\\\Component\\\\HttpFoundation\\\\Response\\|null, Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse given\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\$event of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:checkLogin\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Event\\\\GetResponseLoginEvent\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\$event of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:redirectToProfile\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Event\\\\GetResponseUserEvent\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\$request of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:getRedirect\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\RouterInterface\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Parameter \\$security of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\RouterInterface as its type\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\AlreadyLoggedinListener\\:\\:\\$security has unknown class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security as its type\\.$#"
+			count: 1
+			path: src/EventListener/AlreadyLoggedinListener.php
+
+		-
+			message: "#^Access to constant SECURITY_IMPLICIT_LOGIN on an unknown class Nucleos\\\\UserBundle\\\\NucleosUserEvents\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Call to method getRequest\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Call to method getResponse\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 2
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Call to method logInUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Security\\\\LoginManager\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Caught class Symfony\\\\Component\\\\Security\\\\Core\\\\Exception\\\\AccountStatusException not found\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\UserEvent not found\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Parameter \\$event of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AuthenticationListener\\:\\:authenticate\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Parameter \\$loginManager of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\AuthenticationListener\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Security\\\\LoginManager\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\AuthenticationListener\\:\\:\\$loginManager has unknown class Nucleos\\\\UserBundle\\\\Security\\\\LoginManager as its type\\.$#"
+			count: 1
+			path: src/EventListener/AuthenticationListener.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent\\:\\:setResponse\\(\\)\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method generateToken\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Util\\\\TokenGenerator\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method getConfirmationToken\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method getEmail\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method getSession\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method setConfirmationToken\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method setEnabled\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RedirectResponse not found\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Parameter \\$requestStack of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Parameter \\$tokenGenerator of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Util\\\\TokenGenerator\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:\\$requestStack has unknown class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack as its type\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface as its type\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\EmailConfirmationListener\\:\\:\\$tokenGenerator has unknown class Nucleos\\\\UserBundle\\\\Util\\\\TokenGenerator as its type\\.$#"
+			count: 1
+			path: src/EventListener/EmailConfirmationListener.php
+
+		-
+			message: "#^Call to method add\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Flash\\\\FlashBagInterface\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Call to method getFlashBag\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Session\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Call to method getSession\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Call to method trans\\(\\) on an unknown class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Session not found\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\EventListener\\\\FlashListener\\:\\:getFlashBag\\(\\) has invalid return type Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Flash\\\\FlashBagInterface\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Parameter \\$requestStack of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\FlashListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Parameter \\$translator of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\FlashListener\\:\\:__construct\\(\\) has invalid type Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\FlashListener\\:\\:\\$requestStack has unknown class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack as its type\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\EventListener\\\\FlashListener\\:\\:\\$translator has unknown class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface as its type\\.$#"
+			count: 1
+			path: src/EventListener/FlashListener.php
+
+		-
+			message: "#^Access to constant USER_LOCALE_CHANGED on an unknown class Nucleos\\\\UserBundle\\\\NucleosUserEvents\\.$#"
+			count: 1
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Access to constant USER_TIMEZONE_CHANGED on an unknown class Nucleos\\\\UserBundle\\\\NucleosUserEvents\\.$#"
+			count: 1
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Call to method getRequest\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 2
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Call to method getUser\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 2
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\UserEvent not found\\.$#"
+			count: 2
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Parameter \\$event of method Nucleos\\\\ProfileBundle\\\\EventListener\\\\ProfileChangeListener\\:\\:profileChanged\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent\\.$#"
+			count: 1
+			path: src/EventListener/ProfileChangeListener.php
+
+		-
+			message: "#^Call to method add\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormBuilderInterface\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\LocaleType not found\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\TimezoneType not found\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Parameter \\$builder of method Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\ProfileFormType\\:\\:buildForm\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormBuilderInterface\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Parameter \\$class of method Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\ProfileFormType\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\ProfileFormType\\:\\:\\$class has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface as its type\\.$#"
+			count: 1
+			path: src/Form/Type/ProfileFormType.php
+
+		-
+			message: "#^Call to method add\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\FormBuilderInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Call to method getEmail\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Call to method getUsername\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Call to method setEmail\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Call to method setUsername\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\EmailType not found\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\PasswordType not found\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\RepeatedType not found\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Form\\\\Extension\\\\Core\\\\Type\\\\TextType not found\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Form\\\\Exception\\\\UnexpectedTypeException not found\\.$#"
+			count: 2
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Parameter \\$builder of method Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\RegistrationFormType\\:\\:buildForm\\(\\) has invalid type Symfony\\\\Component\\\\Form\\\\FormBuilderInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Parameter \\$class of method Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\RegistrationFormType\\:\\:__construct\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Parameter \\$form of anonymous function has invalid type Symfony\\\\Component\\\\Form\\\\FormInterface\\.$#"
+			count: 4
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Parameter \\$user of anonymous function has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 4
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\RegistrationFormType\\:\\:\\$class has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface as its type\\.$#"
+			count: 1
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Throwing object of an unknown class Symfony\\\\Component\\\\Form\\\\Exception\\\\UnexpectedTypeException\\.$#"
+			count: 2
+			path: src/Form/Type/RegistrationFormType.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:htmlTemplate\\(\\)\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:textTemplate\\(\\)\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$headers \\(Symfony\\\\Component\\\\Mime\\\\Header\\\\Headers\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$body \\(Symfony\\\\Component\\\\Mime\\\\Part\\\\AbstractPart\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:getUser\\(\\) has invalid return type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:__construct\\(\\) calls parent\\:\\:__construct\\(\\) but Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail does not extend any class\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:getContext\\(\\) calls parent\\:\\:getContext\\(\\) but Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail does not extend any class\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Parameter \\$body of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Mime\\\\Part\\\\AbstractPart\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Parameter \\$headers of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Mime\\\\Header\\\\Headers\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:setUser\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:\\$user has unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface as its type\\.$#"
+			count: 1
+			path: src/Mailer/Mail/RegistrationMail.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\NoopRegistrationMailer\\:\\:sendConfirmationEmailMessage\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/NoopRegistrationMailer.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\RegistrationMailer\\:\\:sendConfirmationEmailMessage\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/RegistrationMailer.php
+
+		-
+			message: "#^Access to constant ABSOLUTE_URL on an unknown class Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Mailer\\\\Mail\\\\RegistrationMail\\:\\:to\\(\\)\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method generate\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method getConfirmationToken\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method getEmail\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method getUsername\\(\\) on an unknown class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method send\\(\\) on an unknown class Symfony\\\\Component\\\\Mailer\\\\MailerInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method trans\\(\\) on an unknown class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Symfony\\\\Component\\\\Mime\\\\Address\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Mime\\\\Address not found\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^PHPDoc tag @throws with type Symfony\\\\Component\\\\Mailer\\\\Exception\\\\TransportExceptionInterface is not subtype of Throwable$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Parameter \\$mailer of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Mailer\\\\MailerInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Parameter \\$router of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Parameter \\$translator of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:__construct\\(\\) has invalid type Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Parameter \\$user of method Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:sendConfirmationEmailMessage\\(\\) has invalid type Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:\\$mailer has unknown class Symfony\\\\Component\\\\Mailer\\\\MailerInterface as its type\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:\\$router has unknown class Symfony\\\\Component\\\\Routing\\\\Generator\\\\UrlGeneratorInterface as its type\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Mailer\\\\SimpleRegistrationMailer\\:\\:\\$translator has unknown class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface as its type\\.$#"
+			count: 1
+			path: src/Mailer/SimpleRegistrationMailer.php
+
+		-
+			message: "#^Call to method add\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 2
+			path: src/Resources/config/routing/profile.php
+
+		-
+			message: "#^Parameter \\$routes of anonymous function has invalid type Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 1
+			path: src/Resources/config/routing/profile.php
+
+		-
+			message: "#^Call to method add\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 4
+			path: src/Resources/config/routing/registration.php
+
+		-
+			message: "#^Parameter \\$routes of anonymous function has invalid type Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 1
+			path: src/Resources/config/routing/registration.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Action\\\\RegisterActionIntegrationTest\\:\\:assertResponseStatusCodeSame\\(\\)\\.$#"
+			count: 1
+			path: tests/Action/RegisterActionIntegrationTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Action\\\\RegisterActionIntegrationTest\\:\\:createClient\\(\\)\\.$#"
+			count: 1
+			path: tests/Action/RegisterActionIntegrationTest.php
+
+		-
+			message: "#^Call to method followRedirects\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 1
+			path: tests/Action/RegisterActionIntegrationTest.php
+
+		-
+			message: "#^Call to method request\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 1
+			path: tests/Action/RegisterActionIntegrationTest.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\Action\\\\RegisterActionIntegrationTest\\:\\:\\$client has unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser as its type\\.$#"
+			count: 1
+			path: tests/Action/RegisterActionIntegrationTest.php
+
+		-
+			message: "#^Call to method import\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 7
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class DAMA\\\\DoctrineTestBundle\\\\DAMADoctrineTestBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Doctrine\\\\Bundle\\\\DoctrineBundle\\\\DoctrineBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\NucleosUserBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Bundle\\\\FrameworkBundle\\\\FrameworkBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Bundle\\\\SecurityBundle\\\\SecurityBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Bundle\\\\TwigBundle\\\\TwigBundle not found\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:registerBundles\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:__construct\\(\\) calls parent\\:\\:__construct\\(\\) but Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel does not extend any class\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Parameter \\$routes of method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureRoutes\\(\\) has invalid type Symfony\\\\Component\\\\Routing\\\\Loader\\\\Configurator\\\\RoutingConfigurator\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Access to constant INTEGER on an unknown class Doctrine\\\\DBAL\\\\Types\\\\Types\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Column does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Entity does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\GeneratedValue does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Id does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Table does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestGroup.php
+
+		-
+			message: "#^Access to constant INTEGER on an unknown class Doctrine\\\\DBAL\\\\Types\\\\Types\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Column does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Entity does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\GeneratedValue does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Id does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\JoinTable does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToMany does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Attribute class Doctrine\\\\ORM\\\\Mapping\\\\Table does not exist\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Instantiated class Doctrine\\\\Common\\\\Collections\\\\ArrayCollection not found\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:__construct\\(\\) calls parent\\:\\:__construct\\(\\) but Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser does not extend any class\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^PHPDoc tag @extends has invalid type Nucleos\\\\UserBundle\\\\Model\\\\GroupInterface\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^PHPDoc tag @extends has invalid type Nucleos\\\\UserBundle\\\\Model\\\\User\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:\\$groups \\(Doctrine\\\\Common\\\\Collections\\\\Collection\\<\\(int\\|string\\), Nucleos\\\\UserBundle\\\\Model\\\\GroupInterface\\>\\) does not accept Doctrine\\\\Common\\\\Collections\\\\ArrayCollection\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:\\$groups has unknown class Doctrine\\\\Common\\\\Collections\\\\Collection as its type\\.$#"
+			count: 2
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:\\$groups has unknown class Nucleos\\\\UserBundle\\\\Model\\\\GroupInterface as its type\\.$#"
+			count: 1
+			path: tests/App/Entity/TestUser.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 1
+			path: tests/App/config/config.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Model\\\\UserInterface not found\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Class Nucleos\\\\UserBundle\\\\Security\\\\LoginManager not found\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\HttpFoundation\\\\Request not found\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\HttpFoundation\\\\Response not found\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Instantiated class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent not found\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\EventListener\\\\AuthenticationListenerTest\\:\\:\\$event has unknown class Nucleos\\\\UserBundle\\\\Event\\\\FilterUserResponseEvent as its type\\.$#"
+			count: 1
+			path: tests/EventListener/AuthenticationListenerTest.php
+
+		-
+			message: "#^Call to method method\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Session\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Call to method method\\(\\) on an unknown class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Call to method push\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Call to method setSession\\(\\) on an unknown class Symfony\\\\Component\\\\HttpFoundation\\\\Request\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Flash\\\\FlashBagInterface not found\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Session not found\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface not found\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\Request not found\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\HttpFoundation\\\\RequestStack not found\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Trying to mock an undefined method getFlashBag\\(\\) on class Symfony\\\\Component\\\\HttpFoundation\\\\Session\\\\Session\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Trying to mock an undefined method trans\\(\\) on class Symfony\\\\Contracts\\\\Translation\\\\TranslatorInterface\\.$#"
+			count: 1
+			path: tests/EventListener/FlashListenerTest.php
+
+		-
+			message: "#^Access to an undefined property Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\ProfileFormTypeTest\\:\\:\\$factory\\.$#"
+			count: 1
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getLocale\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getTimezone\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\ProfileFormTypeTest\\:\\:assertSame\\(\\)\\.$#"
+			count: 3
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\ProfileFormTypeTest\\:\\:assertTrue\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$class of class Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\ProfileFormType constructor expects class\\-string\\<Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\>, string given\\.$#"
+			count: 1
+			path: tests/Form/Type/ProfileFormTypeTest.php
+
+		-
+			message: "#^Access to an undefined property Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\RegistrationFormTypeTest\\:\\:\\$factory\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getEmail\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getPlainPassword\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getUsername\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\RegistrationFormTypeTest\\:\\:assertSame\\(\\)\\.$#"
+			count: 4
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\RegistrationFormTypeTest\\:\\:assertTrue\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$class of class Nucleos\\\\ProfileBundle\\\\Form\\\\Type\\\\RegistrationFormType constructor expects class\\-string\\<Nucleos\\\\UserBundle\\\\Model\\\\UserInterface\\>, string given\\.$#"
+			count: 1
+			path: tests/Form/Type/RegistrationFormTypeTest.php
+
+		-
+			message: "#^Access to an undefined property Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:\\$builder\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Access to an undefined property Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:\\$dispatcher\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Access to an undefined property Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:\\$factory\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:getExtensions\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Call to static method createFormFactoryBuilder\\(\\) on an unknown class Symfony\\\\Component\\\\Form\\\\Forms\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Form\\\\FormBuilder not found\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:setUp\\(\\) calls parent\\:\\:setUp\\(\\) but Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase does not extend any class\\.$#"
+			count: 1
+			path: tests/Form/Type/TypeTestCase.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\ValidatorExtensionTypeTestCase\\:\\:getMockBuilder\\(\\)\\.$#"
+			count: 1
+			path: tests/Form/Type/ValidatorExtensionTypeTestCase.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Validator\\\\Validator\\\\ValidatorInterface not found\\.$#"
+			count: 1
+			path: tests/Form/Type/ValidatorExtensionTypeTestCase.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Form\\\\Extension\\\\Validator\\\\Type\\\\FormTypeValidatorExtension not found\\.$#"
+			count: 1
+			path: tests/Form/Type/ValidatorExtensionTypeTestCase.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Validator\\\\ConstraintViolationList not found\\.$#"
+			count: 1
+			path: tests/Form/Type/ValidatorExtensionTypeTestCase.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\ValidatorExtensionTypeTestCase\\:\\:getTypeExtensions\\(\\) has invalid return type Symfony\\\\Component\\\\Form\\\\Extension\\\\Validator\\\\Type\\\\FormTypeValidatorExtension\\.$#"
+			count: 1
+			path: tests/Form/Type/ValidatorExtensionTypeTestCase.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getLocale\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setEmail\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setPlainPassword\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setRoles\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setUsername\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:assertResponseIsSuccessful\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:assertResponseRedirects\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:assertSame\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:createClient\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:getContainer\\(\\)\\.$#"
+			count: 2
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to method find\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to method flush\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to method persist\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Class Doctrine\\\\ORM\\\\EntityManagerInterface not found\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security not found\\.$#"
+			count: 2
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$username \\(string\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:getEntityManager\\(\\) has invalid return type Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\EditProfileWebTest\\:\\:getSecurity\\(\\) has invalid return type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: tests/Functional/Action/EditProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getConfirmationToken\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setEmail\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setPlainPassword\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setRoles\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setUsername\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertFalse\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertNotNull\\(\\)\\.$#"
+			count: 3
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertNull\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertResponseIsSuccessful\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertResponseRedirects\\(\\)\\.$#"
+			count: 3
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:assertTrue\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:createClient\\(\\)\\.$#"
+			count: 2
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:getContainer\\(\\)\\.$#"
+			count: 2
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method find\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 2
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method flush\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method getRepository\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method persist\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method request\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 2
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to method submitForm\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Class Doctrine\\\\ORM\\\\EntityManagerInterface not found\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security not found\\.$#"
+			count: 2
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$username \\(string\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:getEntityManager\\(\\) has invalid return type Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:getSecurity\\(\\) has invalid return type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Parameter \\$client of method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:performConfirm\\(\\) has invalid type Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Parameter \\$client of method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\RegistrationWebTest\\:\\:performRegister\\(\\) has invalid type Symfony\\\\Bundle\\\\FrameworkBundle\\\\KernelBrowser\\.$#"
+			count: 1
+			path: tests/Functional/Action/RegistrationWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:getUsername\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setEmail\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setPlainPassword\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setRoles\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\Entity\\\\TestUser\\:\\:setUsername\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:assertResponseIsSuccessful\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:assertSelectorTextContains\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:createClient\\(\\)\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to an undefined static method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:getContainer\\(\\)\\.$#"
+			count: 2
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to method find\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to method flush\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to method persist\\(\\) on an unknown class Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Class Doctrine\\\\ORM\\\\EntityManagerInterface not found\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Class Symfony\\\\Bundle\\\\SecurityBundle\\\\Security not found\\.$#"
+			count: 2
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$username \\(string\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:getEntityManager\\(\\) has invalid return type Doctrine\\\\ORM\\\\EntityManagerInterface\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Method Nucleos\\\\ProfileBundle\\\\Tests\\\\Functional\\\\Action\\\\ShowProfileWebTest\\:\\:getSecurity\\(\\) has invalid return type Symfony\\\\Bundle\\\\SecurityBundle\\\\Security\\.$#"
+			count: 1
+			path: tests/Functional/Action/ShowProfileWebTest.php
+
+		-
+			message: "#^Call to method getMessage\\(\\) on an unknown class Symfony\\\\Component\\\\Translation\\\\Exception\\\\InvalidResourceException\\.$#"
+			count: 1
+			path: tests/Resources/XliffTest.php
+
+		-
+			message: "#^Call to method load\\(\\) on an unknown class Symfony\\\\Component\\\\Translation\\\\Loader\\\\XliffFileLoader\\.$#"
+			count: 1
+			path: tests/Resources/XliffTest.php
+
+		-
+			message: "#^Caught class Symfony\\\\Component\\\\Translation\\\\Exception\\\\InvalidResourceException not found\\.$#"
+			count: 1
+			path: tests/Resources/XliffTest.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Translation\\\\Loader\\\\XliffFileLoader not found\\.$#"
+			count: 1
+			path: tests/Resources/XliffTest.php
+
+		-
+			message: "#^Property Nucleos\\\\ProfileBundle\\\\Tests\\\\Resources\\\\XliffTest\\:\\:\\$loader has unknown class Symfony\\\\Component\\\\Translation\\\\Loader\\\\XliffFileLoader as its type\\.$#"
+			count: 1
+			path: tests/Resources/XliffTest.php
+
+		-
+			message: "#^Call to method addCollection\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouteCollection\\.$#"
+			count: 2
+			path: tests/Routing/RoutingTest.php
+
+		-
+			message: "#^Call to method get\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\RouteCollection\\.$#"
+			count: 1
+			path: tests/Routing/RoutingTest.php
+
+		-
+			message: "#^Call to method load\\(\\) on an unknown class Symfony\\\\Component\\\\Routing\\\\Loader\\\\PhpFileLoader\\.$#"
+			count: 2
+			path: tests/Routing/RoutingTest.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Routing\\\\Loader\\\\PhpFileLoader not found\\.$#"
+			count: 1
+			path: tests/Routing/RoutingTest.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Component\\\\Routing\\\\RouteCollection not found\\.$#"
+			count: 1
+			path: tests/Routing/RoutingTest.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:boot\\(\\)\\.$#"
+			count: 1
+			path: tests/bootstrap.php
+
+		-
+			message: "#^Call to an undefined method Nucleos\\\\ProfileBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:shutdown\\(\\)\\.$#"
+			count: 1
+			path: tests/bootstrap.php
+
+		-
+			message: "#^Call to method run\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\Console\\\\Application\\.$#"
+			count: 2
+			path: tests/bootstrap.php
+
+		-
+			message: "#^Call to method setAutoExit\\(\\) on an unknown class Symfony\\\\Bundle\\\\FrameworkBundle\\\\Console\\\\Application\\.$#"
+			count: 1
+			path: tests/bootstrap.php
+
+		-
+			message: "#^Instantiated class Symfony\\\\Bundle\\\\FrameworkBundle\\\\Console\\\\Application not found\\.$#"
+			count: 1
+			path: tests/bootstrap.php

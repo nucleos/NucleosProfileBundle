@@ -22,7 +22,7 @@ final class RegistrationMail extends TemplatedEmail
 
     private UserInterface $user;
 
-    public function __construct(Headers $headers = null, AbstractPart $body = null)
+    public function __construct(?Headers $headers = null, ?AbstractPart $body = null)
     {
         parent::__construct($headers, $body);
 

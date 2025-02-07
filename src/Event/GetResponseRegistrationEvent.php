@@ -24,7 +24,7 @@ final class GetResponseRegistrationEvent extends Event
 
     private ?Response $response = null;
 
-    public function __construct(UserInterface $user, Request $request = null)
+    public function __construct(UserInterface $user, ?Request $request = null)
     {
         $this->user    = $user;
         $this->request = $request;

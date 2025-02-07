@@ -37,7 +37,7 @@ final class RoutingTest extends TestCase
         $collection->addCollection($subCollection);
 
         $route = $collection->get($routeName);
-        self::assertNotNull($route, sprintf('The route "%s" should exists', $routeName));
+        self::assertNotNull($route, \sprintf('The route "%s" should exists', $routeName));
         self::assertSame($path, $route->getPath());
         self::assertSame($methods, $route->getMethods());
     }
