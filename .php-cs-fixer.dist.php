@@ -1,8 +1,8 @@
 <?php
 
-$header = <<<EOF
-This file is part of the NucleosProfileBundle package.
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
+$header = <<<EOF
 (c) Christian Gripp <mail@core23.de>
 
 For the full copyright and license information, please view the LICENSE
@@ -13,7 +13,8 @@ $finder = PhpCsFixer\Finder::create()
     ->in([ __DIR__.'/src',  __DIR__.'/tests'])
 ;
 
-$config = (new PhpCsFixer\Config())
+return (new PhpCsFixer\Config())
+    ->setParallelConfig(ParallelConfigFactory::detect())
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,
@@ -43,15 +44,10 @@ $config = (new PhpCsFixer\Config())
         ],
         'static_lambda' => true,
         'global_namespace_import' => [
-           'import_classes' => true,
-           'import_constants' => false,
-           'import_functions' => false,
-        ],
-        'phpdoc_to_comment' => [
-            'ignored_tags' => ['psalm-suppress'],
+            'import_classes' => true,
+            'import_constants' => false,
+            'import_functions' => false,
         ],
     ])
-    ->setFinder($finder)
-;
+    ->setFinder($finder);
 
-return $config;
