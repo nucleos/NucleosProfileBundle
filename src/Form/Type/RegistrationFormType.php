@@ -39,8 +39,8 @@ final class RegistrationFormType extends AbstractType
     /**
      * @param array<mixed> $options
      *
-     * @SuppressWarnings(PHPMD.NPathComplexity)
-     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings("PHPMD.NPathComplexity")
+     * @SuppressWarnings("PHPMD.ExcessiveMethodLength")
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
