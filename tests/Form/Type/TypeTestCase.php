@@ -11,6 +11,8 @@ namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\Forms;
+use Symfony\Component\Form\FormTypeExtensionInterface;
+use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\Test\TypeTestCase as BaseTypeTestCase;
 
 /**
@@ -35,7 +37,7 @@ abstract class TypeTestCase extends BaseTypeTestCase
     }
 
     /**
-     * @return mixed[]
+     * @return FormTypeExtensionInterface<mixed>[]
      */
     protected function getTypeExtensions(): array
     {
@@ -43,7 +45,7 @@ abstract class TypeTestCase extends BaseTypeTestCase
     }
 
     /**
-     * @return mixed[]
+     * @return FormTypeInterface<mixed>[]
      */
     protected function getTypes(): array
     {

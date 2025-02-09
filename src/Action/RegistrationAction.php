@@ -85,6 +85,9 @@ final class RegistrationAction
         ]));
     }
 
+    /**
+     * @param FormInterface<UserInterface> $form
+     */
     private function updateUser(Request $request, UserInterface $user, FormInterface $form): Response
     {
         $event = new UserFormEvent($user, $form, $request);
@@ -104,6 +107,9 @@ final class RegistrationAction
         return $response;
     }
 
+    /**
+     * @return FormInterface<UserInterface>
+     */
     private function createForm(UserInterface $user): FormInterface
     {
         return $this->formFactory

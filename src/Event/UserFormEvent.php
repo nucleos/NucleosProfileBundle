@@ -14,10 +14,18 @@ use Nucleos\UserBundle\Model\UserInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @template T
+ *
+ * @extends FormEvent<T>
+ */
 final class UserFormEvent extends FormEvent
 {
     private UserInterface $user;
 
+    /**
+     * @param FormInterface<T> $form
+     */
     public function __construct(UserInterface $user, FormInterface $form, Request $request)
     {
         parent::__construct($form, $request);
