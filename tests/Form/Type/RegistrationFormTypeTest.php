@@ -11,6 +11,7 @@ namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
 use Nucleos\ProfileBundle\Form\Type\RegistrationFormType;
 use Nucleos\ProfileBundle\Tests\App\Entity\TestUser;
+use Symfony\Component\Form\FormTypeInterface;
 
 final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
 {
@@ -37,7 +38,7 @@ final class RegistrationFormTypeTest extends ValidatorExtensionTypeTestCase
     }
 
     /**
-     * @return mixed[]
+     * @return FormTypeInterface<mixed>[]
      */
     protected function getTypes(): array
     {

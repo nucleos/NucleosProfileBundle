@@ -11,6 +11,7 @@ namespace Nucleos\ProfileBundle\Tests\Form\Type;
 
 use Nucleos\ProfileBundle\Form\Type\ProfileFormType;
 use Nucleos\ProfileBundle\Tests\App\Entity\TestUser;
+use Symfony\Component\Form\FormTypeInterface;
 
 final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
 {
@@ -32,7 +33,7 @@ final class ProfileFormTypeTest extends ValidatorExtensionTypeTestCase
     }
 
     /**
-     * @return mixed[]
+     * @return FormTypeInterface<mixed>[]
      */
     protected function getTypes(): array
     {

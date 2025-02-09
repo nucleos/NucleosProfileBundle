@@ -1,16 +1,2 @@
 parameters:
 	ignoreErrors:
-		-
-			message: "#^Class Nucleos\\\\ProfileBundle\\\\Event\\\\UserFormEvent extends generic class Nucleos\\\\UserBundle\\\\Event\\\\FormEvent but does not specify its types\\: T$#"
-			count: 1
-			path: src/Event/UserFormEvent.php
-
-		-
-			message: "#^Return type \\(array\\) of method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:getTypeExtensions\\(\\) should be covariant with return type \\(array\\<Symfony\\\\Component\\\\Form\\\\FormTypeExtensionInterface\\>\\) of method Symfony\\\\Component\\\\Form\\\\Test\\\\FormIntegrationTestCase\\:\\:getTypeExtensions\\(\\)$#"
-			count: 1
-			path: tests/Form/Type/TypeTestCase.php
-
-		-
-			message: "#^Return type \\(array\\) of method Nucleos\\\\ProfileBundle\\\\Tests\\\\Form\\\\Type\\\\TypeTestCase\\:\\:getTypes\\(\\) should be covariant with return type \\(array\\<Symfony\\\\Component\\\\Form\\\\FormTypeInterface\\>\\) of method Symfony\\\\Component\\\\Form\\\\Test\\\\FormIntegrationTestCase\\:\\:getTypes\\(\\)$#"
-			count: 1
-			path: tests/Form/Type/TypeTestCase.php
