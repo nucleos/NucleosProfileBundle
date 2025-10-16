@@ -36,7 +36,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "doctrine/persistence": "^2.2.2 || ^3.0.0",
+        "doctrine/persistence": "^4.0.0",
         "nucleos/user-bundle": "^2.3 || ^3.4.0",
         "symfony/config": "^6.4 || ^7.0",
         "symfony/dependency-injection": "^6.4 || ^7.0",
