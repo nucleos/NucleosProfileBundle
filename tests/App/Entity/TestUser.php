@@ -15,15 +15,25 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Nucleos\UserBundle\Entity\BaseUser;
 use Nucleos\UserBundle\Model\GroupInterface;
 use Nucleos\UserBundle\Model\User;
 
-/**
- * @phpstan-extends User<GroupInterface>
- */
+if (class_exists(BaseUser::class)) {
+    /**
+     * @phpstan-extends BaseUser<GroupInterface>
+     */
+    abstract class InternalTestUser extends BaseUser {}
+} else {
+    /**
+     * @phpstan-extends User<GroupInterface>
+     */
+    abstract class InternalTestUser extends User {}
+}
+
 #[ORM\Entity]
 #[ORM\Table(name: 'user__user')]
-class TestUser extends User
+class TestUser extends InternalTestUser
 {
     #[ORM\Id]
     #[ORM\Column(type: Types::INTEGER)]

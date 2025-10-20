@@ -71,7 +71,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'algorithm'        => 'plaintext',
     ]]]);
 
-    $containerConfigurator->extension('nucleos_user', ['db_driver' => 'orm']);
+    // TODO: Remove when dropping support of NucleosUserBundle 3
+    if (class_exists('\Nucleos\UserBundle\Action\CheckEmailAction')) {
+        $containerConfigurator->extension('nucleos_user', ['db_driver' => 'orm']);
+    }
 
     $containerConfigurator->extension('nucleos_user', ['firewall_name' => 'main']);
 
