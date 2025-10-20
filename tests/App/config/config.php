@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
+use Doctrine\DBAL\Connection;
 use Nucleos\ProfileBundle\Tests\App\Entity\TestGroup;
 use Nucleos\ProfileBundle\Tests\App\Entity\TestUser;
 use Nucleos\UserBundle\Model\UserInterface;
@@ -33,7 +34,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $containerConfigurator->extension('twig', ['exception_controller' => null]);
 
-    $containerConfigurator->extension('doctrine', ['dbal' => ['url' => 'sqlite:///%kernel.cache_dir%/data.db', 'logging' => false, 'use_savepoints' => true]]);
+    $containerConfigurator->extension('doctrine', ['dbal' => ['url' => 'sqlite:///%kernel.cache_dir%/data.db', 'logging' => false]]);
+
+    if (method_exists(Connection::class, 'getEventManager')) {
+        $containerConfigurator->extension('doctrine', ['dbal' => ['use_savepoints' => true]]);
+    }
 
     $containerConfigurator->extension('doctrine', ['orm' => [
         'auto_mapping' => true,
