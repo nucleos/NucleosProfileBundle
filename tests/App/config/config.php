@@ -32,8 +32,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $containerConfigurator->extension('twig', ['strict_variables' => true]);
 
-    $containerConfigurator->extension('twig', ['exception_controller' => null]);
-
     $containerConfigurator->extension('doctrine', ['dbal' => ['url' => 'sqlite:///%kernel.cache_dir%/data.db', 'logging' => false]]);
 
     if (method_exists(Connection::class, 'getEventManager')) {
